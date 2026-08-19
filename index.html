@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,424 +7,470 @@
 <title>BlueFlow Enterprises | Bathroom & Kitchen Fittings</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:#f5f7f5;
-color:#17221e;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f7f5;
+    color:#18231f;
 }
 
 header{
-height:75px;
-background:#fff;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:0 6%;
-position:sticky;
-top:0;
-z-index:999;
-box-shadow:0 2px 12px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#fff;
+    height:76px;
+    padding:0 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
 }
 
 .logo{
-display:flex;
-align-items:center;
-gap:10px;
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-.logo-box{
-width:45px;
-height:45px;
-background:#123f34;
-color:#fff;
-border-radius:10px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:bold;
+.logo-icon{
+    width:46px;
+    height:46px;
+    border-radius:10px;
+    background:#123f34;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    font-weight:bold;
 }
 
-.logo-text b{
-display:block;
-letter-spacing:2px;
+.logo strong{
+    display:block;
+    font-size:20px;
+    letter-spacing:3px;
 }
 
-.logo-text small{
-font-size:9px;
-letter-spacing:2px;
-color:#777;
+.logo span{
+    display:block;
+    font-size:10px;
+    letter-spacing:3px;
+    color:#777;
+    margin-top:3px;
 }
 
 nav{
-display:flex;
-gap:25px;
+    display:flex;
+    gap:25px;
 }
 
 nav a{
-text-decoration:none;
-color:#222;
-font-size:14px;
+    text-decoration:none;
+    color:#222;
+    font-size:14px;
 }
 
 .whatsapp{
-text-decoration:none;
-color:white;
-background:#128c4b;
-padding:11px 17px;
-border-radius:8px;
-font-weight:bold;
+    text-decoration:none;
+    color:white;
+    background:#159447;
+    padding:11px 17px;
+    border-radius:8px;
+    font-weight:bold;
 }
+
 
 /* HERO */
 
 .hero{
-min-height:530px;
-padding:70px 7%;
-display:grid;
-grid-template-columns:1fr 1fr;
-align-items:center;
-background:linear-gradient(135deg,#e8f1ec,#cdded5);
+    min-height:500px;
+    padding:70px 7%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    background:linear-gradient(135deg,#e9f2ed,#cfdfd6);
 }
 
-.hero small{
-color:#426b5b;
-letter-spacing:2px;
-font-weight:bold;
+.hero-label{
+    color:#527064;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
 }
 
 .hero h1{
-font-size:62px;
-line-height:1.02;
-margin:20px 0;
+    font-size:60px;
+    line-height:1.05;
+    margin:20px 0;
 }
 
 .hero h1 span{
-color:#26705a;
+    color:#27735c;
 }
 
 .hero p{
-max-width:550px;
-color:#5d6963;
-font-size:18px;
-line-height:1.7;
+    max-width:560px;
+    color:#5f6d66;
+    font-size:18px;
+    line-height:1.7;
 }
 
-.button{
-display:inline-block;
-margin-top:25px;
-padding:14px 24px;
-background:#123f34;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
+.hero-button{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 25px;
+    border-radius:8px;
+    background:#123f34;
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.hero-product{
-display:flex;
-justify-content:center;
-align-items:center;
+.hero-visual{
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .hero-circle{
-width:300px;
-height:300px;
-border-radius:50%;
-background:linear-gradient(145deg,#fff,#a9b5af);
-display:flex;
-align-items:center;
-justify-content:center;
-color:#123f34;
-font-size:24px;
-font-weight:bold;
-letter-spacing:4px;
-box-shadow:20px 25px 55px rgba(0,0,0,.18);
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:linear-gradient(145deg,#fff,#adb8b3);
+    box-shadow:20px 25px 50px rgba(0,0,0,.18);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#123f34;
+    font-size:25px;
+    font-weight:bold;
+    letter-spacing:4px;
 }
+
 
 /* PRODUCTS */
 
 .products{
-padding:70px 6%;
+    padding:75px 6%;
 }
 
 .heading{
-text-align:center;
-margin-bottom:30px;
+    text-align:center;
+    margin-bottom:30px;
 }
 
 .heading small{
-color:#527064;
-letter-spacing:2px;
-font-weight:bold;
+    color:#527064;
+    letter-spacing:3px;
+    font-weight:bold;
 }
 
 .heading h2{
-font-size:40px;
-margin-top:10px;
+    font-size:42px;
+    margin-top:10px;
 }
 
 .search{
-width:100%;
-max-width:550px;
-display:block;
-margin:0 auto 40px;
-padding:15px;
-border:1px solid #d3d9d5;
-border-radius:9px;
-font-size:15px;
-outline:none;
+    display:block;
+    width:100%;
+    max-width:600px;
+    margin:0 auto 40px;
+    padding:16px 20px;
+    border:1px solid #d1d8d4;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+    background:white;
 }
+
 
 /* GRID */
 
 .product-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:22px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
 }
+
 
 /* CARD */
 
-.product{
-background:white;
-border-radius:12px;
-overflow:hidden;
-border:1px solid #e0e5e1;
-transition:.2s;
+.product-card{
+    background:#fff;
+    border:1px solid #e0e5e2;
+    border-radius:13px;
+    overflow:hidden;
+    transition:.25s;
 }
 
-.product:hover{
-transform:translateY(-5px);
-box-shadow:0 15px 35px rgba(0,0,0,.1);
+.product-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.1);
 }
 
-/* IMAGE */
 
-.product-image{
-height:230px;
-background:linear-gradient(145deg,#fdfdfd,#dce2de);
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
+/* PHOTO */
+
+.product-photo{
+    height:235px;
+    background:linear-gradient(145deg,#fafafa,#dfe5e1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
 }
 
-.fake-product{
-width:155px;
-height:105px;
-background:linear-gradient(145deg,#ffffff,#aeb7b3);
-border-radius:20px 20px 35px 35px;
-box-shadow:
-10px 15px 25px rgba(0,0,0,.18),
-inset -8px -8px 15px rgba(0,0,0,.12);
-display:flex;
-align-items:center;
-justify-content:center;
-color:#123f34;
-font-size:12px;
-font-weight:bold;
-letter-spacing:1px;
+.product-photo img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    padding:15px;
+    display:block;
 }
 
-.brand{
-position:absolute;
-top:12px;
-left:12px;
-background:#123f34;
-color:#fff;
-padding:6px 10px;
-border-radius:5px;
-font-size:10px;
-font-weight:bold;
-z-index:5;
+.photo-placeholder{
+    width:160px;
+    height:110px;
+    border-radius:18px 18px 35px 35px;
+    background:linear-gradient(145deg,#fff,#b3bcb8);
+    box-shadow:
+        10px 15px 25px rgba(0,0,0,.18),
+        inset -8px -8px 15px rgba(0,0,0,.12);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#123f34;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:1px;
 }
+
+.brand-tag{
+    position:absolute;
+    top:12px;
+    left:12px;
+    background:#123f34;
+    color:white;
+    padding:6px 10px;
+    border-radius:5px;
+    font-size:10px;
+    font-weight:bold;
+    z-index:5;
+}
+
 
 /* INFO */
 
 .product-info{
-padding:17px;
+    padding:18px;
 }
 
 .product-info h3{
-font-size:15px;
-line-height:1.5;
-min-height:68px;
+    font-size:15px;
+    line-height:1.5;
+    min-height:70px;
 }
 
 .price{
-margin-top:10px;
-font-size:22px;
-font-weight:bold;
-color:#123f34;
+    margin-top:10px;
+    color:#123f34;
+    font-size:23px;
+    font-weight:bold;
 }
 
-.enquiry{
-display:block;
-margin-top:15px;
-padding:10px;
-text-align:center;
-border:1px solid #123f34;
-color:#123f34;
-text-decoration:none;
-border-radius:7px;
-font-weight:bold;
-font-size:13px;
+.enquire{
+    display:block;
+    margin-top:15px;
+    padding:11px;
+    text-align:center;
+    border:1px solid #123f34;
+    border-radius:7px;
+    color:#123f34;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
 }
 
-.enquiry:hover{
-background:#123f34;
-color:#fff;
+.enquire:hover{
+    background:#123f34;
+    color:white;
 }
+
 
 /* ABOUT */
 
 .about{
-padding:80px 10%;
-background:#fff;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
+    background:white;
+    padding:75px 10%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
 }
 
 .about small{
-color:#527064;
-letter-spacing:2px;
-font-weight:bold;
+    color:#527064;
+    letter-spacing:2px;
+    font-weight:bold;
 }
 
 .about h2{
-font-size:40px;
-margin-top:12px;
+    font-size:40px;
+    margin-top:12px;
 }
 
 .about p{
-color:#626d67;
-font-size:17px;
-line-height:1.8;
+    color:#606d67;
+    font-size:17px;
+    line-height:1.8;
 }
+
 
 /* CONTACT */
 
 .contact{
-padding:70px 10%;
-background:#123f34;
-color:#fff;
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:30px;
+    padding:70px 10%;
+    background:#123f34;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
 }
 
 .contact h2{
-font-size:38px;
-margin-bottom:15px;
+    font-size:36px;
+    margin-bottom:18px;
 }
 
 .contact p{
-color:#d6dfda;
-line-height:1.8;
+    color:#d7e1dc;
+    line-height:1.8;
 }
 
 .contact-button{
-background:#fff;
-color:#123f34;
-padding:14px 22px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
+    background:white;
+    color:#123f34;
+    text-decoration:none;
+    padding:14px 22px;
+    border-radius:8px;
+    font-weight:bold;
+    white-space:nowrap;
 }
+
 
 /* FOOTER */
 
 footer{
-padding:25px;
-text-align:center;
-background:#edf0ed;
-color:#777;
-font-size:13px;
+    text-align:center;
+    padding:25px;
+    background:#edf1ee;
+    color:#777;
+    font-size:13px;
 }
+
 
 /* MOBILE */
 
 @media(max-width:950px){
 
-nav{
-display:none;
+    nav{
+        display:none;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+        padding:55px 7%;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero-visual{
+        margin-top:40px;
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .contact{
+        display:block;
+    }
+
+    .contact-button{
+        display:inline-block;
+        margin-top:25px;
+    }
 }
 
-.hero{
-grid-template-columns:1fr;
-padding:55px 7%;
-}
-
-.hero h1{
-font-size:48px;
-}
-
-.hero-product{
-margin-top:40px;
-}
-
-.product-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.about{
-grid-template-columns:1fr;
-}
-
-.contact{
-display:block;
-}
-
-.contact-button{
-display:inline-block;
-margin-top:25px;
-}
-}
 
 @media(max-width:550px){
 
-header{
-padding:0 4%;
-}
+    header{
+        padding:0 4%;
+    }
 
-.whatsapp{
-padding:9px 10px;
-font-size:12px;
-}
+    .logo strong{
+        font-size:17px;
+    }
 
-.hero h1{
-font-size:42px;
-}
+    .whatsapp{
+        padding:9px 11px;
+        font-size:12px;
+    }
 
-.product-grid{
-grid-template-columns:1fr;
-}
+    .hero h1{
+        font-size:42px;
+    }
 
-.heading h2{
-font-size:32px;
-}
+    .hero-circle{
+        width:240px;
+        height:240px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .heading h2{
+        font-size:34px;
+    }
 }
 </style>
 </head>
 
 <body>
 
+
+<!-- HEADER -->
+
 <header>
 
 <div class="logo">
 
-<div class="logo-box">BF</div>
+<div class="logo-icon">
+BF
+</div>
 
-<div class="logo-text">
-<b>BLUEFLOW</b>
-<small>ENTERPRISES</small>
+<div>
+<strong>BLUEFLOW</strong>
+<span>ENTERPRISES</span>
 </div>
 
 </div>
+
 
 <nav>
 <a href="#home">Home</a>
@@ -433,11 +479,14 @@ font-size:32px;
 <a href="#contact">Contact</a>
 </nav>
 
+
 <a
 class="whatsapp"
 href="https://wa.me/919354352599"
 target="_blank">
+
 WhatsApp
+
 </a>
 
 </header>
@@ -449,9 +498,9 @@ WhatsApp
 
 <div>
 
-<small>
+<div class="hero-label">
 PREMIUM BATHROOM • KITCHEN • FITTINGS
-</small>
+</div>
 
 <h1>
 Modern Fittings.
@@ -464,13 +513,18 @@ BlueFlow Enterprises offers stylish, durable and reliable
 bathroom and kitchen fittings for modern homes.
 </p>
 
-<a class="button" href="#products">
+<a
+href="#products"
+class="hero-button">
+
 View Products
+
 </a>
 
 </div>
 
-<div class="hero-product">
+
+<div class="hero-visual">
 
 <div class="hero-circle">
 BLUEFLOW
@@ -493,12 +547,14 @@ BLUEFLOW
 
 </div>
 
+
 <input
+type="text"
 id="search"
 class="search"
-type="text"
 placeholder="🔎 Search product..."
 >
+
 
 <div
 id="productGrid"
@@ -517,7 +573,7 @@ class="product-grid">
 <small>ABOUT BLUEFLOW</small>
 
 <h2>
-Built for everyday performance.
+Quality fittings for modern spaces.
 </h2>
 
 </div>
@@ -561,11 +617,14 @@ Ghaziabad, Uttar Pradesh – 201010.
 
 </div>
 
+
 <a
 class="contact-button"
 href="https://wa.me/919354352599"
 target="_blank">
+
 Enquire on WhatsApp
+
 </a>
 
 </section>
@@ -581,132 +640,183 @@ All Rights Reserved.
 
 <script>
 
-/* ==========================================
-   BLUEFLOW PRODUCTS
-   सभी prices में ₹300 बढ़ाया गया है
-   ========================================== */
+/*
+=================================================
+BLUEFLOW PRODUCTS
+PRICE = PIXAFLO PRICE + ₹300
+PHOTO = images/product-XX.jpg
+=================================================
+*/
 
 const products = [
 
 {
 name:"24 Inch Folding Towel Rack for Bathroom",
-price:1619
+price:1619,
+image:"images/product-01.jpg"
 },
 
 {
 name:"3-Inches Stainless Steel Pop-Up Waste Coupling",
-price:649
+price:649,
+image:"images/product-02.jpg"
 },
 
 {
 name:"3-Inches Stainless Steel Pop-Up Waste Coupling – Combo Pack of 2",
-price:859
+price:859,
+image:"images/product-03.jpg"
 },
 
 {
 name:"5-Inches Stainless Steel Pop-Up Waste Coupling",
-price:735
+price:735,
+image:"images/product-04.jpg"
 },
 
 {
 name:"Admix Brass 2 Way Angle Cock",
-price:1035
+price:1035,
+image:"images/product-05.jpg"
 },
 
 {
 name:"Admix Brass Bath Tub Diverter Spout with Wall Flange",
-price:1299
+price:1299,
+image:"images/product-06.jpg"
 },
 
 {
 name:"Admix Brass Bath Tub Spout with Wall Flange – Combo Pack of 2",
-price:1585
+price:1585,
+image:"images/product-07.jpg"
 },
 
 {
 name:"Admix Brass Bath Tub Spout with Wall Flange – High Flow",
-price:955
+price:955,
+image:"images/product-08.jpg"
 },
 
 {
 name:"Admix Brass Concealed Single Lever Chrome Basin Mixer",
-price:3099
+price:3099,
+image:"images/product-09.jpg"
 },
 
 {
 name:"Admix Brass Extended Tall Body Pillar Cock 12 Inch",
-price:1599
+price:1599,
+image:"images/product-10.jpg"
 },
 
 {
 name:"Admix Brass Pillar Tap for Wash Basin",
-price:999
+price:999,
+image:"images/product-11.jpg"
 },
 
 {
 name:"Admix Brass Single Lever Basin Mixer – 18 Inch Hoses",
-price:1869
+price:1869,
+image:"images/product-12.jpg"
 },
 
 {
-name:"Brass Long Body Bib Cock",
-price:899
+name:"Admix Brass Single Lever Basin Mixer – 24 Inch Hoses",
+price:1899,
+image:"images/product-13.jpg"
 },
 
 {
-name:"Brass Health Faucet",
-price:799
+name:"Admix Brass Single Lever Salon Mixer",
+price:1899,
+image:"images/product-14.jpg"
 },
 
 {
-name:"Brass Swan Neck Tap",
-price:1199
+name:"Admix Brass Single Lever Sink Mixer",
+price:2879,
+image:"images/product-15.jpg"
 },
 
 {
-name:"Brass Wall Mixer",
-price:2499
+name:"Florent Brass 2 Way Angle Cock",
+price:999,
+image:"images/product-16.jpg"
 },
 
 {
-name:"Brass Bib Cock",
-price:699
+name:"Florent Brass Angle Valve Combo – Pack of 2",
+price:939,
+image:"images/product-17.jpg"
 },
 
 {
-name:"Brass Basin Mixer",
-price:1899
+name:"Infix Brass Single Lever Basin Mixer",
+price:1645,
+image:"images/product-18.jpg"
 },
 
 {
-name:"Brass Pillar Cock",
-price:999
+name:"Koroit Brass Single Lever Basin Mixer",
+price:1885,
+image:"images/product-19.jpg"
 },
 
 {
-name:"Brass Angle Cock",
-price:599
+name:"Florent Brass Single Lever Basin Mixer",
+price:1999,
+image:"images/product-20.jpg"
 }
 
 ];
 
 
-/* DISPLAY */
+/* ==============================================
+   PRODUCT DISPLAY
+================================================ */
 
-const grid =
+const productGrid =
 document.getElementById("productGrid");
 
 
-function displayProducts(list){
+function showProducts(list){
 
-grid.innerHTML="";
+productGrid.innerHTML="";
+
+
+if(list.length === 0){
+
+productGrid.innerHTML = `
+<div style="
+grid-column:1/-1;
+text-align:center;
+padding:50px;
+background:#fff;
+border-radius:12px;
+">
+
+<h3>Product नहीं मिला</h3>
+
+<p style="margin-top:10px;color:#777;">
+कृपया दूसरा नाम search करें।
+</p>
+
+</div>
+`;
+
+return;
+
+}
+
 
 list.forEach(function(product){
 
 const card =
 document.createElement("div");
 
-card.className="product";
+card.className="product-card";
 
 
 const message =
@@ -716,19 +826,30 @@ product.name +
 product.price.toLocaleString("en-IN");
 
 
-card.innerHTML=`
+card.innerHTML = `
 
-<div class="product-image">
+<div class="product-photo">
 
-<span class="brand">
+<span class="brand-tag">
 BLUEFLOW
 </span>
 
-<div class="fake-product">
+<img
+src="${product.image}"
+alt="${product.name}"
+onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+>
+
+<div
+class="photo-placeholder"
+style="display:none;">
+
 BLUEFLOW
+
 </div>
 
 </div>
+
 
 <div class="product-info">
 
@@ -741,7 +862,7 @@ ${product.name}
 </div>
 
 <a
-class="enquiry"
+class="enquire"
 href="https://wa.me/919354352599?text=${encodeURIComponent(message)}"
 target="_blank">
 
@@ -753,35 +874,37 @@ Enquire Now
 
 `;
 
-grid.appendChild(card);
+productGrid.appendChild(card);
 
 });
 
 }
 
 
-displayProducts(products);
+showProducts(products);
 
 
-/* SEARCH */
+/* ==============================================
+   SEARCH
+================================================ */
 
 document
 .getElementById("search")
 .addEventListener("input",function(){
 
-const text =
+const searchText =
 this.value.toLowerCase().trim();
 
-const result =
+const filtered =
 products.filter(function(product){
 
 return product.name
 .toLowerCase()
-.includes(text);
+.includes(searchText);
 
 });
 
-displayProducts(result);
+showProducts(filtered);
 
 });
 

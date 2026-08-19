@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>BlueFlow Enterprises | Industrial Solutions</title>
-
-<meta name="description" content="BlueFlow Enterprises - Quality industrial products and manufacturing solutions.">
+<meta name="description" content="BlueFlow Enterprises - Industrial products and manufacturing solutions.">
 
 <style>
 :root{
@@ -14,15 +13,12 @@
   --dark:#09243f;
   --light:#f5f9fd;
   --accent:#16a4df;
+  --green:#16a34a;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
   margin:0;
@@ -40,12 +36,12 @@ a{
 .top{
   background:#06284a;
   color:#fff;
-  font-size:13px;
   padding:9px 6%;
   display:flex;
   justify-content:space-between;
   gap:15px;
   flex-wrap:wrap;
+  font-size:14px;
 }
 
 nav{
@@ -66,31 +62,31 @@ nav{
   color:var(--blue);
 }
 
-.logo span{
-  color:var(--accent);
-}
+.logo span{color:var(--accent)}
 
-nav .links{
+.links{
   display:flex;
   gap:22px;
   align-items:center;
   font-weight:600;
 }
 
+.links a:hover{color:var(--blue)}
+
 .btn{
   display:inline-block;
   background:var(--blue);
   color:#fff;
-  padding:11px 18px;
+  padding:12px 20px;
   border-radius:6px;
   border:0;
   cursor:pointer;
   font-size:15px;
+  font-weight:600;
+  margin:5px;
 }
 
-.btn:hover{
-  opacity:.9;
-}
+.btn.green{background:var(--green)}
 
 .hero{
   min-height:560px;
@@ -116,16 +112,7 @@ nav .links{
   max-width:680px;
 }
 
-.hero .btn{
-  background:#fff;
-  color:var(--blue);
-  margin-right:10px;
-  margin-top:10px;
-}
-
-section{
-  padding:75px 6%;
-}
+section{padding:75px 6%}
 
 .heading{
   text-align:center;
@@ -158,9 +145,7 @@ section{
   margin-top:0;
 }
 
-.about{
-  background:var(--light);
-}
+.about{background:var(--light)}
 
 .aboutgrid{
   display:grid;
@@ -196,6 +181,82 @@ section{
   color:var(--blue);
 }
 
+.contact-info{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  max-width:1000px;
+  margin:0 auto 35px;
+}
+
+.info{
+  background:var(--light);
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+}
+
+.info strong{
+  display:block;
+  color:var(--blue);
+  margin-bottom:7px;
+}
+
+.enquiry-box{
+  max-width:800px;
+  margin:auto;
+  background:#fff;
+  padding:35px;
+  border-radius:14px;
+  box-shadow:0 8px 30px #09243f18;
+  border:1px solid #e3edf5;
+}
+
+.form-group{
+  margin-bottom:18px;
+}
+
+.form-group label{
+  display:block;
+  font-weight:700;
+  margin-bottom:7px;
+}
+
+.form-group input,
+.form-group textarea{
+  width:100%;
+  padding:14px;
+  border:1px solid #ccd9e5;
+  border-radius:7px;
+  font-size:16px;
+  font-family:Arial,Helvetica,sans-serif;
+  outline:none;
+}
+
+.form-group textarea{
+  min-height:140px;
+  resize:vertical;
+}
+
+.submit-btn{
+  width:100%;
+  background:var(--green);
+  color:#fff;
+  border:0;
+  padding:16px;
+  border-radius:7px;
+  font-size:17px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.note{
+  text-align:center;
+  margin-top:15px;
+  color:#666;
+  font-size:13px;
+}
+
 .cta{
   background:linear-gradient(110deg,var(--dark),var(--blue));
   color:#fff;
@@ -205,78 +266,6 @@ section{
 .cta h2{
   font-size:38px;
   margin:0 0 12px;
-}
-
-.cta .btn{
-  background:#fff;
-  color:var(--blue);
-}
-
-.contact-box{
-  max-width:800px;
-  margin:auto;
-  background:#fff;
-  padding:35px;
-  border-radius:12px;
-  box-shadow:0 8px 30px #09243f18;
-}
-
-.form-row{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-}
-
-.form-group{
-  margin-bottom:18px;
-}
-
-.form-group label{
-  display:block;
-  font-weight:600;
-  margin-bottom:6px;
-  color:var(--dark);
-}
-
-.form-group input,
-.form-group textarea{
-  width:100%;
-  padding:13px;
-  border:1px solid #cddbe7;
-  border-radius:6px;
-  font-size:15px;
-  font-family:Arial,Helvetica,sans-serif;
-  outline:none;
-}
-
-.form-group input:focus,
-.form-group textarea:focus{
-  border-color:var(--blue);
-}
-
-.form-group textarea{
-  min-height:130px;
-  resize:vertical;
-}
-
-.contact-info{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  margin-bottom:35px;
-}
-
-.info{
-  background:#f5f9fd;
-  padding:20px;
-  border-radius:8px;
-  text-align:center;
-}
-
-.info strong{
-  display:block;
-  color:var(--blue);
-  margin-bottom:5px;
 }
 
 footer{
@@ -291,9 +280,7 @@ footer{
   gap:40px;
 }
 
-.footgrid h3{
-  color:#fff;
-}
+.footgrid h3{color:#fff}
 
 .copyright{
   text-align:center;
@@ -303,40 +290,87 @@ footer{
   font-size:13px;
 }
 
+/* MOBILE + TABLET */
+
 @media(max-width:800px){
 
-  nav .links{
+  nav{
+    padding:14px 5%;
+  }
+
+  .links{
     display:none;
   }
 
-  .grid,
-  .aboutgrid,
-  .stats,
-  .footgrid,
-  .contact-info{
-    grid-template-columns:1fr;
-  }
-
-  .form-row{
-    grid-template-columns:1fr;
-    gap:0;
+  .top{
+    padding:10px 5%;
+    font-size:12px;
   }
 
   .hero{
     min-height:520px;
-    padding:60px 5%;
+    padding:55px 5%;
   }
 
   .hero h1{
     font-size:42px;
   }
 
+  .hero p{
+    font-size:17px;
+  }
+
   section{
     padding:55px 5%;
   }
 
-  .contact-box{
+  .heading h2{
+    font-size:32px;
+  }
+
+  .grid,
+  .aboutgrid,
+  .contact-info,
+  .footgrid{
+    grid-template-columns:1fr;
+  }
+
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .enquiry-box{
     padding:22px;
+  }
+
+  .btn{
+    padding:12px 16px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media(max-width:480px){
+
+  .logo{
+    font-size:22px;
+  }
+
+  .hero h1{
+    font-size:36px;
+  }
+
+  .hero{
+    min-height:500px;
+  }
+
+  .stats{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .form-group input,
+  .form-group textarea{
+    font-size:16px;
   }
 }
 </style>
@@ -344,31 +378,25 @@ footer{
 
 <body>
 
-<!-- TOP BAR -->
 <div class="top">
   <span>Industrial Manufacturing & Solutions</span>
   <span>Plot No. 206, Karkar Model Industrial Area, Sahibabad, Ghaziabad</span>
 </div>
 
-<!-- NAVIGATION -->
 <nav>
-  <div class="logo">
-    Blue<span>Flow</span> Enterprises
-  </div>
+  <div class="logo">Blue<span>Flow</span> Enterprises</div>
 
   <div class="links">
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#products">Products</a>
     <a href="#quality">Quality</a>
-    <a href="#contact" class="btn">Contact Us</a>
+    <a href="#contact">Enquiry</a>
   </div>
 </nav>
 
-<!-- HERO -->
 <header class="hero" id="home">
   <div>
-
     <div style="font-weight:700;letter-spacing:2px">
       BLUEFLOW ENTERPRISES
     </div>
@@ -382,24 +410,16 @@ footer{
       quality, consistency and customer satisfaction.
     </p>
 
-    <a class="btn" href="#products">
-      Explore Products
-    </a>
-
-    <a class="btn" href="#contact">
-      Get in Touch
-    </a>
-
+    <a class="btn" href="#products">Explore Products</a>
+    <a class="btn green" href="#contact">Send Enquiry</a>
   </div>
 </header>
 
-<!-- ABOUT -->
 <section id="about" class="about">
 
   <div class="aboutgrid">
 
     <div>
-
       <div class="heading" style="text-align:left;margin:0">
         <h2>About BlueFlow</h2>
       </div>
@@ -411,11 +431,9 @@ footer{
       </p>
 
       <p>
-        Our approach combines efficient processes, quality-focused
-        workmanship and responsive customer service to meet project
-        requirements.
+        Our approach combines efficient processes, quality-focused workmanship
+        and responsive customer service to meet project requirements.
       </p>
-
     </div>
 
     <div class="aboutbox">
@@ -435,7 +453,7 @@ footer{
 
         <div class="stat">
           <strong>24/7</strong>
-          Support Mindset
+          Support
         </div>
 
         <div class="stat">
@@ -449,25 +467,18 @@ footer{
         </div>
 
       </div>
-
     </div>
-
   </div>
-
 </section>
 
-<!-- PRODUCTS -->
 <section id="products">
 
   <div class="heading">
-
     <h2>Our Products & Solutions</h2>
-
     <p>
-      Quality products and practical industrial solutions for different
-      business requirements.
+      Quality-focused industrial products and solutions designed for
+      reliable performance.
     </p>
-
   </div>
 
   <div class="grid">
@@ -494,21 +505,16 @@ footer{
     </div>
 
   </div>
-
 </section>
 
-<!-- QUALITY -->
 <section id="quality" class="about">
 
   <div class="heading">
-
     <h2>Quality & Reliability</h2>
-
     <p>
       We aim to build lasting customer relationships through consistent
       quality, clear communication and dependable service.
     </p>
-
   </div>
 
   <div class="grid">
@@ -536,155 +542,113 @@ footer{
     </div>
 
   </div>
-
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
 
   <div class="heading">
-
-    <h2>Contact BlueFlow Enterprises</h2>
-
+    <h2>Send Your Enquiry</h2>
     <p>
-      Send us your enquiry, quotation request or business requirement.
+      Fill in your details and your enquiry will open directly in WhatsApp.
     </p>
+  </div>
+
+  <div class="contact-info">
+
+    <div class="info">
+      <strong>WhatsApp</strong>
+      +91 9354352599
+    </div>
+
+    <div class="info">
+      <strong>Location</strong>
+      Sahibabad, Ghaziabad
+    </div>
+
+    <div class="info">
+      <strong>Business</strong>
+      BlueFlow Enterprises
+    </div>
 
   </div>
 
-  <div class="contact-box">
+  <div class="enquiry-box">
 
-    <div class="contact-info">
+    <form id="whatsappForm">
 
-      <div class="info">
-        <strong>Mobile</strong>
-        <a href="tel:9354352599">9354352599</a>
-      </div>
+      <div class="form-group">
+        <label for="name">Your Name *</label>
 
-      <div class="info">
-        <strong>Email</strong>
-        <a href="mailto:blueflowenterprises@gmail.com">
-          blueflowenterprises@gmail.com
-        </a>
-      </div>
-
-      <div class="info">
-        <strong>Location</strong>
-        Sahibabad, Ghaziabad
-      </div>
-
-    </div>
-
-    <!-- EMAIL FORM -->
-    <form
-      action="https://formsubmit.co/blueflowenterprises@gmail.com"
-      method="POST"
-    >
-
-      <input
-        type="hidden"
-        name="_subject"
-        value="New Enquiry - BlueFlow Enterprises Website"
-      >
-
-      <input
-        type="hidden"
-        name="_captcha"
-        value="false"
-      >
-
-      <input
-        type="hidden"
-        name="_template"
-        value="table"
-      >
-
-      <input
-        type="hidden"
-        name="_next"
-        value="https://blueflowenterprises.github.io/BlueFlow/"
-      >
-
-      <div class="form-row">
-
-        <div class="form-group">
-          <label>Your Name *</label>
-          <input
-            type="text"
-            name="name"
-            placeholder="Enter your name"
-            required
-          >
-        </div>
-
-        <div class="form-group">
-          <label>Mobile Number *</label>
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Enter mobile number"
-            required
-          >
-        </div>
-
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your name"
+          required
+        >
       </div>
 
       <div class="form-group">
+        <label for="mobile">Mobile Number *</label>
 
-        <label>Email *</label>
+        <input
+          type="tel"
+          id="mobile"
+          placeholder="Enter your mobile number"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
 
         <input
           type="email"
-          name="email"
+          id="email"
           placeholder="Enter your email"
-          required
         >
-
       </div>
 
       <div class="form-group">
-
-        <label>Message / Requirement *</label>
+        <label for="message">Message / Requirement *</label>
 
         <textarea
-          name="message"
+          id="message"
           placeholder="Write your requirement..."
           required
         ></textarea>
-
       </div>
 
-      <button class="btn" type="submit">
-        Send Enquiry
+      <button
+        type="submit"
+        class="submit-btn"
+      >
+        Send Enquiry on WhatsApp
       </button>
+
+      <div class="note">
+        Your enquiry will open directly in WhatsApp.
+      </div>
 
     </form>
 
   </div>
-
 </section>
 
-<!-- CTA -->
 <section class="cta">
 
   <h2>Let's Work Together</h2>
 
   <p>
-    Contact BlueFlow Enterprises for product enquiries, quotations and
-    business requirements.
+    Contact BlueFlow Enterprises for product enquiries,
+    quotations and business requirements.
   </p>
 
-  <a class="btn" href="tel:9354352599">
-    Call Now
-  </a>
-
-  <a class="btn" href="mailto:blueflowenterprises@gmail.com">
-    Email Us
+  <a class="btn green" href="#contact">
+    Send Enquiry on WhatsApp
   </a>
 
 </section>
 
-<!-- FOOTER -->
 <footer>
 
   <div class="footgrid">
@@ -699,20 +663,18 @@ footer{
     </div>
 
     <div>
-
       <h3>Quick Links</h3>
 
       <p>
+        <a href="#home">Home</a><br>
         <a href="#about">About</a><br>
         <a href="#products">Products</a><br>
         <a href="#quality">Quality</a><br>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Enquiry</a>
       </p>
-
     </div>
 
     <div>
-
       <h3>Address</h3>
 
       <p>
@@ -721,6 +683,12 @@ footer{
         Uttar Pradesh – 201010
       </p>
 
+      <p>
+        WhatsApp:
+        <a href="https://wa.me/919354352599" target="_blank">
+          +91 9354352599
+        </a>
+      </p>
     </div>
 
   </div>
@@ -730,6 +698,54 @@ footer{
   </div>
 
 </footer>
+
+<script>
+
+document
+.getElementById("whatsappForm")
+.addEventListener("submit", function(event){
+
+  event.preventDefault();
+
+  const name =
+    document.getElementById("name").value.trim();
+
+  const mobile =
+    document.getElementById("mobile").value.trim();
+
+  const email =
+    document.getElementById("email").value.trim();
+
+  const message =
+    document.getElementById("message").value.trim();
+
+  const whatsappNumber = "919354352599";
+
+  const whatsappMessage =
+`Hello BlueFlow Enterprises,
+
+I would like to make an enquiry.
+
+Name: ${name}
+Mobile Number: ${mobile}
+Email: ${email || "Not provided"}
+
+Message / Requirement:
+${message}
+
+Thank you.`;
+
+  const whatsappURL =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(whatsappMessage);
+
+  window.location.href = whatsappURL;
+
+});
+
+</script>
 
 </body>
 </html>

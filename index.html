@@ -1,747 +1,787 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="hi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BlueFlow Enterprises | Industrial Solutions</title>
-<meta name="description" content="BlueFlow Enterprises - Industrial products and manufacturing solutions.">
+<title>BlueFlow Enterprises | Bathroom & Kitchen Fittings</title>
 
 <style>
-:root{
-  --blue:#0757a5;
-  --dark:#09243f;
-  --light:#f5f9fd;
-  --accent:#16a4df;
-  --green:#16a34a;
-}
-
-*{box-sizing:border-box}
-
-html{scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  color:#18324b;
-  line-height:1.6;
-  background:#fff;
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f7f5;
+color:#17221e;
 }
 
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-.top{
-  background:#06284a;
-  color:#fff;
-  padding:9px 6%;
-  display:flex;
-  justify-content:space-between;
-  gap:15px;
-  flex-wrap:wrap;
-  font-size:14px;
-}
-
-nav{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:#fff;
-  box-shadow:0 2px 15px #0002;
-  padding:14px 6%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+header{
+height:75px;
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 6%;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 2px 12px rgba(0,0,0,.08);
 }
 
 .logo{
-  font-size:25px;
-  font-weight:800;
-  color:var(--blue);
+display:flex;
+align-items:center;
+gap:10px;
 }
 
-.logo span{color:var(--accent)}
-
-.links{
-  display:flex;
-  gap:22px;
-  align-items:center;
-  font-weight:600;
+.logo-box{
+width:45px;
+height:45px;
+background:#123f34;
+color:#fff;
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
 }
 
-.links a:hover{color:var(--blue)}
-
-.btn{
-  display:inline-block;
-  background:var(--blue);
-  color:#fff;
-  padding:12px 20px;
-  border-radius:6px;
-  border:0;
-  cursor:pointer;
-  font-size:15px;
-  font-weight:600;
-  margin:5px;
+.logo-text b{
+display:block;
+letter-spacing:2px;
 }
 
-.btn.green{background:var(--green)}
+.logo-text small{
+font-size:9px;
+letter-spacing:2px;
+color:#777;
+}
+
+nav{
+display:flex;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:#222;
+font-size:14px;
+}
+
+.whatsapp{
+text-decoration:none;
+color:white;
+background:#128c4b;
+padding:11px 17px;
+border-radius:8px;
+font-weight:bold;
+}
+
+/* HERO */
 
 .hero{
-  min-height:560px;
-  background:
-    linear-gradient(90deg,#06284be8,#0757a5bb),
-    url("https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1800&q=80")
-    center/cover;
-  display:flex;
-  align-items:center;
-  padding:70px 6%;
-  color:#fff;
+min-height:530px;
+padding:70px 7%;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+background:linear-gradient(135deg,#e8f1ec,#cdded5);
+}
+
+.hero small{
+color:#426b5b;
+letter-spacing:2px;
+font-weight:bold;
 }
 
 .hero h1{
-  font-size:clamp(40px,6vw,70px);
-  line-height:1.05;
-  margin:0 0 20px;
-  max-width:760px;
+font-size:62px;
+line-height:1.02;
+margin:20px 0;
+}
+
+.hero h1 span{
+color:#26705a;
 }
 
 .hero p{
-  font-size:19px;
-  max-width:680px;
+max-width:550px;
+color:#5d6963;
+font-size:18px;
+line-height:1.7;
 }
 
-section{padding:75px 6%}
+.button{
+display:inline-block;
+margin-top:25px;
+padding:14px 24px;
+background:#123f34;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+.hero-product{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.hero-circle{
+width:300px;
+height:300px;
+border-radius:50%;
+background:linear-gradient(145deg,#fff,#a9b5af);
+display:flex;
+align-items:center;
+justify-content:center;
+color:#123f34;
+font-size:24px;
+font-weight:bold;
+letter-spacing:4px;
+box-shadow:20px 25px 55px rgba(0,0,0,.18);
+}
+
+/* PRODUCTS */
+
+.products{
+padding:70px 6%;
+}
 
 .heading{
-  text-align:center;
-  max-width:750px;
-  margin:0 auto 45px;
+text-align:center;
+margin-bottom:30px;
+}
+
+.heading small{
+color:#527064;
+letter-spacing:2px;
+font-weight:bold;
 }
 
 .heading h2{
-  font-size:38px;
-  color:var(--dark);
-  margin:0 0 10px;
+font-size:40px;
+margin-top:10px;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:24px;
+.search{
+width:100%;
+max-width:550px;
+display:block;
+margin:0 auto 40px;
+padding:15px;
+border:1px solid #d3d9d5;
+border-radius:9px;
+font-size:15px;
+outline:none;
 }
 
-.card{
-  background:#fff;
-  border:1px solid #e3edf5;
-  border-radius:10px;
-  padding:28px;
-  box-shadow:0 8px 25px #09243f0d;
+/* GRID */
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:22px;
 }
 
-.card h3{
-  color:var(--blue);
-  margin-top:0;
+/* CARD */
+
+.product{
+background:white;
+border-radius:12px;
+overflow:hidden;
+border:1px solid #e0e5e1;
+transition:.2s;
 }
 
-.about{background:var(--light)}
-
-.aboutgrid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
+.product:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 35px rgba(0,0,0,.1);
 }
 
-.aboutbox{
-  background:#fff;
-  padding:35px;
-  border-left:5px solid var(--accent);
-  box-shadow:0 8px 25px #09243f12;
+/* IMAGE */
+
+.product-image{
+height:230px;
+background:linear-gradient(145deg,#fdfdfd,#dce2de);
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
 }
 
-.stats{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
-  margin-top:25px;
+.fake-product{
+width:155px;
+height:105px;
+background:linear-gradient(145deg,#ffffff,#aeb7b3);
+border-radius:20px 20px 35px 35px;
+box-shadow:
+10px 15px 25px rgba(0,0,0,.18),
+inset -8px -8px 15px rgba(0,0,0,.12);
+display:flex;
+align-items:center;
+justify-content:center;
+color:#123f34;
+font-size:12px;
+font-weight:bold;
+letter-spacing:1px;
 }
 
-.stat{
-  background:#fff;
-  padding:18px 8px;
-  text-align:center;
-  border-radius:8px;
+.brand{
+position:absolute;
+top:12px;
+left:12px;
+background:#123f34;
+color:#fff;
+padding:6px 10px;
+border-radius:5px;
+font-size:10px;
+font-weight:bold;
+z-index:5;
 }
 
-.stat strong{
-  display:block;
-  font-size:27px;
-  color:var(--blue);
+/* INFO */
+
+.product-info{
+padding:17px;
 }
 
-.contact-info{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  max-width:1000px;
-  margin:0 auto 35px;
+.product-info h3{
+font-size:15px;
+line-height:1.5;
+min-height:68px;
 }
 
-.info{
-  background:var(--light);
-  padding:20px;
-  border-radius:10px;
-  text-align:center;
+.price{
+margin-top:10px;
+font-size:22px;
+font-weight:bold;
+color:#123f34;
 }
 
-.info strong{
-  display:block;
-  color:var(--blue);
-  margin-bottom:7px;
+.enquiry{
+display:block;
+margin-top:15px;
+padding:10px;
+text-align:center;
+border:1px solid #123f34;
+color:#123f34;
+text-decoration:none;
+border-radius:7px;
+font-weight:bold;
+font-size:13px;
 }
 
-.enquiry-box{
-  max-width:800px;
-  margin:auto;
-  background:#fff;
-  padding:35px;
-  border-radius:14px;
-  box-shadow:0 8px 30px #09243f18;
-  border:1px solid #e3edf5;
+.enquiry:hover{
+background:#123f34;
+color:#fff;
 }
 
-.form-group{
-  margin-bottom:18px;
+/* ABOUT */
+
+.about{
+padding:80px 10%;
+background:#fff;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
 }
 
-.form-group label{
-  display:block;
-  font-weight:700;
-  margin-bottom:7px;
+.about small{
+color:#527064;
+letter-spacing:2px;
+font-weight:bold;
 }
 
-.form-group input,
-.form-group textarea{
-  width:100%;
-  padding:14px;
-  border:1px solid #ccd9e5;
-  border-radius:7px;
-  font-size:16px;
-  font-family:Arial,Helvetica,sans-serif;
-  outline:none;
+.about h2{
+font-size:40px;
+margin-top:12px;
 }
 
-.form-group textarea{
-  min-height:140px;
-  resize:vertical;
+.about p{
+color:#626d67;
+font-size:17px;
+line-height:1.8;
 }
 
-.submit-btn{
-  width:100%;
-  background:var(--green);
-  color:#fff;
-  border:0;
-  padding:16px;
-  border-radius:7px;
-  font-size:17px;
-  font-weight:700;
-  cursor:pointer;
+/* CONTACT */
+
+.contact{
+padding:70px 10%;
+background:#123f34;
+color:#fff;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:30px;
 }
 
-.note{
-  text-align:center;
-  margin-top:15px;
-  color:#666;
-  font-size:13px;
+.contact h2{
+font-size:38px;
+margin-bottom:15px;
 }
 
-.cta{
-  background:linear-gradient(110deg,var(--dark),var(--blue));
-  color:#fff;
-  text-align:center;
+.contact p{
+color:#d6dfda;
+line-height:1.8;
 }
 
-.cta h2{
-  font-size:38px;
-  margin:0 0 12px;
+.contact-button{
+background:#fff;
+color:#123f34;
+padding:14px 22px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
 }
+
+/* FOOTER */
 
 footer{
-  background:#061c31;
-  color:#cbd8e4;
-  padding:50px 6% 20px;
+padding:25px;
+text-align:center;
+background:#edf0ed;
+color:#777;
+font-size:13px;
 }
 
-.footgrid{
-  display:grid;
-  grid-template-columns:1.3fr 1fr 1fr;
-  gap:40px;
+/* MOBILE */
+
+@media(max-width:950px){
+
+nav{
+display:none;
 }
 
-.footgrid h3{color:#fff}
-
-.copyright{
-  text-align:center;
-  border-top:1px solid #ffffff22;
-  margin-top:35px;
-  padding-top:20px;
-  font-size:13px;
+.hero{
+grid-template-columns:1fr;
+padding:55px 7%;
 }
 
-/* MOBILE + TABLET */
-
-@media(max-width:800px){
-
-  nav{
-    padding:14px 5%;
-  }
-
-  .links{
-    display:none;
-  }
-
-  .top{
-    padding:10px 5%;
-    font-size:12px;
-  }
-
-  .hero{
-    min-height:520px;
-    padding:55px 5%;
-  }
-
-  .hero h1{
-    font-size:42px;
-  }
-
-  .hero p{
-    font-size:17px;
-  }
-
-  section{
-    padding:55px 5%;
-  }
-
-  .heading h2{
-    font-size:32px;
-  }
-
-  .grid,
-  .aboutgrid,
-  .contact-info,
-  .footgrid{
-    grid-template-columns:1fr;
-  }
-
-  .stats{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .enquiry-box{
-    padding:22px;
-  }
-
-  .btn{
-    padding:12px 16px;
-  }
+.hero h1{
+font-size:48px;
 }
 
-/* SMALL MOBILE */
+.hero-product{
+margin-top:40px;
+}
 
-@media(max-width:480px){
+.product-grid{
+grid-template-columns:repeat(2,1fr);
+}
 
-  .logo{
-    font-size:22px;
-  }
+.about{
+grid-template-columns:1fr;
+}
 
-  .hero h1{
-    font-size:36px;
-  }
+.contact{
+display:block;
+}
 
-  .hero{
-    min-height:500px;
-  }
+.contact-button{
+display:inline-block;
+margin-top:25px;
+}
+}
 
-  .stats{
-    grid-template-columns:1fr 1fr;
-  }
+@media(max-width:550px){
 
-  .form-group input,
-  .form-group textarea{
-    font-size:16px;
-  }
+header{
+padding:0 4%;
+}
+
+.whatsapp{
+padding:9px 10px;
+font-size:12px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.product-grid{
+grid-template-columns:1fr;
+}
+
+.heading h2{
+font-size:32px;
+}
 }
 </style>
 </head>
 
 <body>
 
-<div class="top">
-  <span>Industrial Manufacturing & Solutions</span>
-  <span>Plot No. 206, Karkar Model Industrial Area, Sahibabad, Ghaziabad</span>
+<header>
+
+<div class="logo">
+
+<div class="logo-box">BF</div>
+
+<div class="logo-text">
+<b>BLUEFLOW</b>
+<small>ENTERPRISES</small>
+</div>
+
 </div>
 
 <nav>
-  <div class="logo">Blue<span>Flow</span> Enterprises</div>
-
-  <div class="links">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#quality">Quality</a>
-    <a href="#contact">Enquiry</a>
-  </div>
+<a href="#home">Home</a>
+<a href="#products">Products</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<header class="hero" id="home">
-  <div>
-    <div style="font-weight:700;letter-spacing:2px">
-      BLUEFLOW ENTERPRISES
-    </div>
+<a
+class="whatsapp"
+href="https://wa.me/919354352599"
+target="_blank">
+WhatsApp
+</a>
 
-    <h1>
-      Reliable Industrial Solutions Built for Performance
-    </h1>
-
-    <p>
-      Professional manufacturing and industrial solutions with a focus on
-      quality, consistency and customer satisfaction.
-    </p>
-
-    <a class="btn" href="#products">Explore Products</a>
-    <a class="btn green" href="#contact">Send Enquiry</a>
-  </div>
 </header>
 
-<section id="about" class="about">
 
-  <div class="aboutgrid">
+<!-- HERO -->
 
-    <div>
-      <div class="heading" style="text-align:left;margin:0">
-        <h2>About BlueFlow</h2>
-      </div>
+<section class="hero" id="home">
 
-      <p>
-        BlueFlow Enterprises is focused on delivering dependable industrial
-        products and solutions for businesses that value quality and
-        long-term performance.
-      </p>
+<div>
 
-      <p>
-        Our approach combines efficient processes, quality-focused workmanship
-        and responsive customer service to meet project requirements.
-      </p>
-    </div>
+<small>
+PREMIUM BATHROOM • KITCHEN • FITTINGS
+</small>
 
-    <div class="aboutbox">
+<h1>
+Modern Fittings.
+<br>
+<span>Reliable Flow.</span>
+</h1>
 
-      <h3>Our Commitment</h3>
+<p>
+BlueFlow Enterprises offers stylish, durable and reliable
+bathroom and kitchen fittings for modern homes.
+</p>
 
-      <p>
-        Quality • Reliability • Timely Delivery • Customer Satisfaction
-      </p>
+<a class="button" href="#products">
+View Products
+</a>
 
-      <div class="stats">
+</div>
 
-        <div class="stat">
-          <strong>01</strong>
-          Quality First
-        </div>
+<div class="hero-product">
 
-        <div class="stat">
-          <strong>24/7</strong>
-          Support
-        </div>
+<div class="hero-circle">
+BLUEFLOW
+</div>
 
-        <div class="stat">
-          <strong>100%</strong>
-          Commitment
-        </div>
-
-        <div class="stat">
-          <strong>∞</strong>
-          Long-Term Focus
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="products">
-
-  <div class="heading">
-    <h2>Our Products & Solutions</h2>
-    <p>
-      Quality-focused industrial products and solutions designed for
-      reliable performance.
-    </p>
-  </div>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>Industrial Products</h3>
-      <p>
-        High-quality products designed for demanding industrial applications.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Custom Solutions</h3>
-      <p>
-        Solutions tailored to customer specifications and project requirements.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Manufacturing Support</h3>
-      <p>
-        Reliable production and supply support focused on consistency and delivery.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section id="quality" class="about">
-
-  <div class="heading">
-    <h2>Quality & Reliability</h2>
-    <p>
-      We aim to build lasting customer relationships through consistent
-      quality, clear communication and dependable service.
-    </p>
-  </div>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>Quality Control</h3>
-      <p>
-        Process-focused checks help maintain consistent output and product standards.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Timely Delivery</h3>
-      <p>
-        Planned execution and communication to support customer schedules.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Customer Focus</h3>
-      <p>
-        We work closely with customers to understand requirements and deliver
-        practical solutions.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section id="contact">
-
-  <div class="heading">
-    <h2>Send Your Enquiry</h2>
-    <p>
-      Fill in your details and your enquiry will open directly in WhatsApp.
-    </p>
-  </div>
-
-  <div class="contact-info">
-
-    <div class="info">
-      <strong>WhatsApp</strong>
-      +91 9354352599
-    </div>
-
-    <div class="info">
-      <strong>Location</strong>
-      Sahibabad, Ghaziabad
-    </div>
-
-    <div class="info">
-      <strong>Business</strong>
-      BlueFlow Enterprises
-    </div>
-
-  </div>
-
-  <div class="enquiry-box">
-
-    <form id="whatsappForm">
-
-      <div class="form-group">
-        <label for="name">Your Name *</label>
-
-        <input
-          type="text"
-          id="name"
-          placeholder="Enter your name"
-          required
-        >
-      </div>
-
-      <div class="form-group">
-        <label for="mobile">Mobile Number *</label>
-
-        <input
-          type="tel"
-          id="mobile"
-          placeholder="Enter your mobile number"
-          required
-        >
-      </div>
-
-      <div class="form-group">
-        <label for="email">Email</label>
-
-        <input
-          type="email"
-          id="email"
-          placeholder="Enter your email"
-        >
-      </div>
-
-      <div class="form-group">
-        <label for="message">Message / Requirement *</label>
-
-        <textarea
-          id="message"
-          placeholder="Write your requirement..."
-          required
-        ></textarea>
-      </div>
-
-      <button
-        type="submit"
-        class="submit-btn"
-      >
-        Send Enquiry on WhatsApp
-      </button>
-
-      <div class="note">
-        Your enquiry will open directly in WhatsApp.
-      </div>
-
-    </form>
-
-  </div>
-</section>
-
-<section class="cta">
-
-  <h2>Let's Work Together</h2>
-
-  <p>
-    Contact BlueFlow Enterprises for product enquiries,
-    quotations and business requirements.
-  </p>
-
-  <a class="btn green" href="#contact">
-    Send Enquiry on WhatsApp
-  </a>
+</div>
 
 </section>
+
+
+<!-- PRODUCTS -->
+
+<section class="products" id="products">
+
+<div class="heading">
+
+<small>OUR COLLECTION</small>
+
+<h2>All Products</h2>
+
+</div>
+
+<input
+id="search"
+class="search"
+type="text"
+placeholder="🔎 Search product..."
+>
+
+<div
+id="productGrid"
+class="product-grid">
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div>
+
+<small>ABOUT BLUEFLOW</small>
+
+<h2>
+Built for everyday performance.
+</h2>
+
+</div>
+
+<div>
+
+<p>
+BlueFlow Enterprises provides bathroom and kitchen
+fittings with a focus on modern design, dependable
+quality and everyday performance.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div>
+
+<h2>
+Let's talk about your requirement.
+</h2>
+
+<p>
+Plot No. 206, Karkar Model Industrial Area, Sahibabad,
+<br>
+Ghaziabad, Uttar Pradesh – 201010.
+</p>
+
+<br>
+
+<p>
+📞 9354352599
+<br>
+✉ BlueFlowEnterprises@gmail.com
+</p>
+
+</div>
+
+<a
+class="contact-button"
+href="https://wa.me/919354352599"
+target="_blank">
+Enquire on WhatsApp
+</a>
+
+</section>
+
 
 <footer>
 
-  <div class="footgrid">
-
-    <div>
-      <h3>BlueFlow Enterprises</h3>
-
-      <p>
-        Industrial products and solutions focused on quality,
-        reliability and customer satisfaction.
-      </p>
-    </div>
-
-    <div>
-      <h3>Quick Links</h3>
-
-      <p>
-        <a href="#home">Home</a><br>
-        <a href="#about">About</a><br>
-        <a href="#products">Products</a><br>
-        <a href="#quality">Quality</a><br>
-        <a href="#contact">Enquiry</a>
-      </p>
-    </div>
-
-    <div>
-      <h3>Address</h3>
-
-      <p>
-        Plot No. 206, Karkar Model Industrial Area,<br>
-        Sahibabad, Ghaziabad,<br>
-        Uttar Pradesh – 201010
-      </p>
-
-      <p>
-        WhatsApp:
-        <a href="https://wa.me/919354352599" target="_blank">
-          +91 9354352599
-        </a>
-      </p>
-    </div>
-
-  </div>
-
-  <div class="copyright">
-    © 2026 BlueFlow Enterprises. All Rights Reserved.
-  </div>
+© 2026 BlueFlow Enterprises.
+All Rights Reserved.
 
 </footer>
 
+
 <script>
 
+/* ==========================================
+   BLUEFLOW PRODUCTS
+   सभी prices में ₹300 बढ़ाया गया है
+   ========================================== */
+
+const products = [
+
+{
+name:"24 Inch Folding Towel Rack for Bathroom",
+price:1619
+},
+
+{
+name:"3-Inches Stainless Steel Pop-Up Waste Coupling",
+price:649
+},
+
+{
+name:"3-Inches Stainless Steel Pop-Up Waste Coupling – Combo Pack of 2",
+price:859
+},
+
+{
+name:"5-Inches Stainless Steel Pop-Up Waste Coupling",
+price:735
+},
+
+{
+name:"Admix Brass 2 Way Angle Cock",
+price:1035
+},
+
+{
+name:"Admix Brass Bath Tub Diverter Spout with Wall Flange",
+price:1299
+},
+
+{
+name:"Admix Brass Bath Tub Spout with Wall Flange – Combo Pack of 2",
+price:1585
+},
+
+{
+name:"Admix Brass Bath Tub Spout with Wall Flange – High Flow",
+price:955
+},
+
+{
+name:"Admix Brass Concealed Single Lever Chrome Basin Mixer",
+price:3099
+},
+
+{
+name:"Admix Brass Extended Tall Body Pillar Cock 12 Inch",
+price:1599
+},
+
+{
+name:"Admix Brass Pillar Tap for Wash Basin",
+price:999
+},
+
+{
+name:"Admix Brass Single Lever Basin Mixer – 18 Inch Hoses",
+price:1869
+},
+
+{
+name:"Brass Long Body Bib Cock",
+price:899
+},
+
+{
+name:"Brass Health Faucet",
+price:799
+},
+
+{
+name:"Brass Swan Neck Tap",
+price:1199
+},
+
+{
+name:"Brass Wall Mixer",
+price:2499
+},
+
+{
+name:"Brass Bib Cock",
+price:699
+},
+
+{
+name:"Brass Basin Mixer",
+price:1899
+},
+
+{
+name:"Brass Pillar Cock",
+price:999
+},
+
+{
+name:"Brass Angle Cock",
+price:599
+}
+
+];
+
+
+/* DISPLAY */
+
+const grid =
+document.getElementById("productGrid");
+
+
+function displayProducts(list){
+
+grid.innerHTML="";
+
+list.forEach(function(product){
+
+const card =
+document.createElement("div");
+
+card.className="product";
+
+
+const message =
+"Hello BlueFlow Enterprises, I want to enquire about " +
+product.name +
+" - ₹" +
+product.price.toLocaleString("en-IN");
+
+
+card.innerHTML=`
+
+<div class="product-image">
+
+<span class="brand">
+BLUEFLOW
+</span>
+
+<div class="fake-product">
+BLUEFLOW
+</div>
+
+</div>
+
+<div class="product-info">
+
+<h3>
+${product.name}
+</h3>
+
+<div class="price">
+₹${product.price.toLocaleString("en-IN")}
+</div>
+
+<a
+class="enquiry"
+href="https://wa.me/919354352599?text=${encodeURIComponent(message)}"
+target="_blank">
+
+Enquire Now
+
+</a>
+
+</div>
+
+`;
+
+grid.appendChild(card);
+
+});
+
+}
+
+
+displayProducts(products);
+
+
+/* SEARCH */
+
 document
-.getElementById("whatsappForm")
-.addEventListener("submit", function(event){
+.getElementById("search")
+.addEventListener("input",function(){
 
-  event.preventDefault();
+const text =
+this.value.toLowerCase().trim();
 
-  const name =
-    document.getElementById("name").value.trim();
+const result =
+products.filter(function(product){
 
-  const mobile =
-    document.getElementById("mobile").value.trim();
+return product.name
+.toLowerCase()
+.includes(text);
 
-  const email =
-    document.getElementById("email").value.trim();
+});
 
-  const message =
-    document.getElementById("message").value.trim();
-
-  const whatsappNumber = "919354352599";
-
-  const whatsappMessage =
-`Hello BlueFlow Enterprises,
-
-I would like to make an enquiry.
-
-Name: ${name}
-Mobile Number: ${mobile}
-Email: ${email || "Not provided"}
-
-Message / Requirement:
-${message}
-
-Thank you.`;
-
-  const whatsappURL =
-    "https://wa.me/" +
-    whatsappNumber +
-    "?text=" +
-    encodeURIComponent(whatsappMessage);
-
-  window.location.href = whatsappURL;
+displayProducts(result);
 
 });
 

@@ -7,45 +7,187 @@
 <meta name="description" content="BlueFlow Enterprises - industrial products and manufacturing solutions.">
 <style>
 :root{--blue:#0757a5;--dark:#09243f;--light:#f5f9fd;--accent:#16a4df}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#18324b;line-height:1.6}
-a{text-decoration:none;color:inherit}.top{background:#06284a;color:#fff;font-size:14px;padding:8px 6%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#18324b;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.top{background:#06284a;color:#fff;font-size:14px;padding:8px 6%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 nav{position:sticky;top:0;z-index:10;background:#fff;box-shadow:0 2px 15px #0001;padding:14px 6%;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:25px;font-weight:800;color:var(--blue)}.logo span{color:var(--accent)}
-nav .links{display:flex;gap:25px;align-items:center;font-weight:600}.btn{background:var(--blue);color:white;padding:11px 18px;border-radius:5px}
+.logo{font-size:25px;font-weight:800;color:var(--blue)}
+.logo span{color:var(--accent)}
+nav .links{display:flex;gap:25px;align-items:center;font-weight:600}
+.btn{background:var(--blue);color:white;padding:11px 18px;border-radius:5px}
 .hero{min-height:560px;background:linear-gradient(90deg,#06284be8,#0757a5bb),url("https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1800&q=80") center/cover;display:flex;align-items:center;padding:70px 6%;color:white}
-.hero h1{font-size:clamp(40px,6vw,70px);line-height:1.05;margin:0 0 20px;max-width:760px}.hero p{font-size:19px;max-width:680px}.hero .btn{background:white;color:var(--blue);margin-right:10px}
-section{padding:75px 6%}.heading{text-align:center;max-width:750px;margin:0 auto 45px}.heading h2{font-size:38px;color:var(--dark);margin:0 0 10px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.card{background:white;border:1px solid #e3edf5;border-radius:10px;padding:28px;box-shadow:0 8px 25px #09243f0d}.card h3{color:var(--blue);margin-top:0}
-.about{background:var(--light)}.aboutgrid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.aboutbox{background:#fff;padding:35px;border-left:5px solid var(--accent);box-shadow:0 8px 25px #09243f12}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}.stat{background:#fff;padding:25px;text-align:center;border-radius:8px}.stat strong{display:block;font-size:30px;color:var(--blue)}
-.cta{background:linear-gradient(110deg,var(--dark),var(--blue));color:#fff;text-align:center}.cta h2{font-size:38px;margin:0 0 12px}.cta .btn{background:#fff;color:var(--blue)}
-footer{background:#061c31;color:#cbd8e4;padding:50px 6% 20px}.footgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}.footgrid h3{color:#fff}.copyright{text-align:center;border-top:1px solid #ffffff22;margin-top:35px;padding-top:20px;font-size:13px}
-@media(max-width:800px){nav .links{display:none}.grid,.aboutgrid,.stats,.footgrid{grid-template-columns:1fr}.hero{min-height:520px}section{padding:55px 5%}}
+.hero h1{font-size:clamp(40px,6vw,70px);line-height:1.05;margin:0 0 20px;max-width:760px}
+.hero p{font-size:19px;max-width:680px}
+.hero .btn{background:white;color:var(--blue);margin-right:10px}
+section{padding:75px 6%}
+.heading{text-align:center;max-width:750px;margin:0 auto 45px}
+.heading h2{font-size:38px;color:var(--dark);margin:0 0 10px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:white;border:1px solid #e3edf5;border-radius:10px;padding:28px;box-shadow:0 8px 25px #09243f0d}
+.card h3{color:var(--blue);margin-top:0}
+.about{background:var(--light)}
+.aboutgrid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.aboutbox{background:#fff;padding:35px;border-left:5px solid var(--accent);box-shadow:0 8px 25px #09243f12}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
+.stat{background:#fff;padding:25px;text-align:center;border-radius:8px}
+.stat strong{display:block;font-size:30px;color:var(--blue)}
+.cta{background:linear-gradient(110deg,var(--dark),var(--blue));color:#fff;text-align:center}
+.cta h2{font-size:38px;margin:0 0 12px}
+.cta .btn{background:#fff;color:var(--blue)}
+footer{background:#061c31;color:#cbd8e4;padding:50px 6% 20px}
+.footgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
+.footgrid h3{color:#fff}
+.copyright{text-align:center;border-top:1px solid #ffffff22;margin-top:35px;padding-top:20px;font-size:13px}
+@media(max-width:800px){
+nav .links{display:none}
+.grid,.aboutgrid,.stats,.footgrid{grid-template-columns:1fr}
+.hero{min-height:520px}
+section{padding:55px 5%}
+}
 </style>
 </head>
-<body>
-<div class="top"><span>Industrial Manufacturing & Solutions</span><span>Plot No. 206, Karkar Model Industrial Area, Sahibabad, Ghaziabad</span></div>
-<nav><div class="logo">Blue<span>Flow</span> Enterprises</div><div class="links"><a href="#home">Home</a><a href="#about">About</a><a href="#products">Products</a><a href="#quality">Quality</a><a href="#contact" class="btn">Contact Us</a></div></nav>
 
-<header class="hero" id="home"><div>
+<body>
+
+<div class="top">
+<span>Industrial Manufacturing & Solutions</span>
+<span>Plot No. 206, Karkar Model Industrial Area, Sahibabad, Ghaziabad</span>
+</div>
+
+<nav>
+<div class="logo">Blue<span>Flow</span> Enterprises</div>
+<div class="links">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#products">Products</a>
+<a href="#quality">Quality</a>
+<a href="#contact" class="btn">Contact Us</a>
+</div>
+</nav>
+
+<header class="hero" id="home">
+<div>
 <div style="font-weight:700;letter-spacing:2px">BLUEFLOW ENTERPRISES</div>
 <h1>Reliable Industrial Solutions Built for Performance</h1>
 <p>Professional manufacturing and industrial solutions with a focus on quality, consistency and customer satisfaction.</p>
-<a class="btn" href="#products">Explore Products</a><a class="btn" href="#contact">Get in Touch</a>
-</div></header>
+<a class="btn" href="#products">Explore Products</a>
+<a class="btn" href="#contact">Get in Touch</a>
+</div>
+</header>
 
-<section id="about" class="about"><div class="aboutgrid"><div><div class="heading" style="text-align:left;margin:0"><h2>About BlueFlow</h2></div>
+<section id="about" class="about">
+<div class="aboutgrid">
+<div>
+<div class="heading" style="text-align:left;margin:0">
+<h2>About BlueFlow</h2>
+</div>
 <p>BlueFlow Enterprises is focused on delivering dependable industrial products and solutions for businesses that value quality and long-term performance.</p>
-<p>Our approach combines efficient processes, quality-focused workmanship and responsive customer service to meet project requirements.</p></div>
-<div class="aboutbox"><h3>Our Commitment</h3><p>Quality • Reliability • Timely Delivery • Customer Satisfaction</p><div class="stats"><div class="stat"><strong>01</strong>Quality First</div><div class="stat"><strong>24/7</strong>Support Mindset</div><div class="stat"><strong>100%</strong>Commitment</div><div class="stat"><strong>∞</strong>Long-Term Focus</div></div></div></div></section>
+<p>Our approach combines efficient processes, quality-focused workmanship and responsive customer service to meet project requirements.</p>
+</div>
 
-<section id="products"><div class="heading"><h2>Our Products & Solutions</h2><p>Replace these placeholders with your actual product categories, specifications and photos.</p></div>
-<div class="grid"><div class="card"><h3>Industrial Products</h3><p>High-quality products designed for demanding industrial applications.</p></div><div class="card"><h3>Custom Solutions</h3><p>Solutions tailored to customer specifications and project requirements.</p></div><div class="card"><h3>Manufacturing Support</h3><p>Reliable production and supply support focused on consistency and delivery.</p></div></div></section>
+<div class="aboutbox">
+<h3>Our Commitment</h3>
+<p>Quality • Reliability • Timely Delivery • Customer Satisfaction</p>
+<div class="stats">
+<div class="stat"><strong>01</strong>Quality First</div>
+<div class="stat"><strong>24/7</strong>Support Mindset</div>
+<div class="stat"><strong>100%</strong>Commitment</div>
+<div class="stat"><strong>∞</strong>Long-Term Focus</div>
+</div>
+</div>
+</div>
+</section>
 
-<section id="quality" class="about"><div class="heading"><h2>Quality & Reliability</h2><p>We aim to build lasting customer relationships through consistent quality, clear communication and dependable service.</p></div>
-<div class="grid"><div class="card"><h3>Quality Control</h3><p>Process-focused checks help maintain consistent output and product standards.</p></div><div class="card"><h3>Timely Delivery</h3><p>Planned execution and communication to support customer schedules.</p></div><div class="card"><h3>Customer Focus</h3><p>We work closely with customers to understand requirements and deliver practical solutions.</p></div></div></section>
+<section id="products">
+<div class="heading">
+<h2>Our Products & Solutions</h2>
+<p>Replace these placeholders with your actual product categories, specifications and photos.</p>
+</div>
 
-<section class="cta" id="contact"><h2>Let's Work Together</h2><p>Contact BlueFlow Enterprises for product enquiries, quotations and business requirements.</p><a class="btn" href="mailto:info@blueflowenterprises.com">Email Us</a></section>
+<div class="grid">
+<div class="card">
+<h3>Industrial Products</h3>
+<p>High-quality products designed for demanding industrial applications.</p>
+</div>
 
-<footer><div class="footgrid"><div><h3>BlueFlow Enterprises</h3><p>Industrial products and solutions focused on quality, reliability and customer satisfaction.</p></div><div><h3>Quick Links</h3><p><a href="#about">About</a><br><a href="#products">Products</a><br><a href="#quality">Quality</a><br><a href="#contact">Contact</a></p></div><div><h3>Address</h3><p>Plot No. 206, Karkar Model Industrial Area,<br>Sahibabad, Ghaziabad,<br>Uttar Pradesh – 201010</p></div></div><div class="copyright">© 2026 BlueFlow Enterprises. All Rights Reserved.</div></footer>
-</body></html>
+<div class="card">
+<h3>Custom Solutions</h3>
+<p>Solutions tailored to customer specifications and project requirements.</p>
+</div>
+
+<div class="card">
+<h3>Manufacturing Support</h3>
+<p>Reliable production and supply support focused on consistency and delivery.</p>
+</div>
+</div>
+</section>
+
+<section id="quality" class="about">
+<div class="heading">
+<h2>Quality & Reliability</h2>
+<p>We aim to build lasting customer relationships through consistent quality, clear communication and dependable service.</p>
+</div>
+
+<div class="grid">
+<div class="card">
+<h3>Quality Control</h3>
+<p>Process-focused checks help maintain consistent output and product standards.</p>
+</div>
+
+<div class="card">
+<h3>Timely Delivery</h3>
+<p>Planned execution and communication to support customer schedules.</p>
+</div>
+
+<div class="card">
+<h3>Customer Focus</h3>
+<p>We work closely with customers to understand requirements and deliver practical solutions.</p>
+</div>
+</div>
+</section>
+
+<section class="cta" id="contact">
+<h2>Let's Work Together</h2>
+<p>Contact BlueFlow Enterprises for product enquiries, quotations and business requirements.</p>
+
+<!-- CORRECT BLUEFLOW GMAIL ADDRESS -->
+<a class="btn" href="mailto:blueflowenterprises@gmail.com">Email Us</a>
+</section>
+
+<footer>
+<div class="footgrid">
+
+<div>
+<h3>BlueFlow Enterprises</h3>
+<p>Industrial products and solutions focused on quality, reliability and customer satisfaction.</p>
+</div>
+
+<div>
+<h3>Quick Links</h3>
+<p>
+<a href="#about">About</a><br>
+<a href="#products">Products</a><br>
+<a href="#quality">Quality</a><br>
+<a href="#contact">Contact</a>
+</p>
+</div>
+
+<div>
+<h3>Address</h3>
+<p>
+Plot No. 206, Karkar Model Industrial Area,<br>
+Sahibabad, Ghaziabad,<br>
+Uttar Pradesh – 201010
+</p>
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 BlueFlow Enterprises. All Rights Reserved.
+</div>
+</footer>
+
+</body>
+</html>

@@ -1,16 +1,23 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Blue Flow Enterprises | Sanitary & Plumbing Products</title>
 
-<meta name="description" content="Blue Flow Enterprises - Quality sanitary and plumbing products in Sahibabad, Ghaziabad. Plot No. 180, Karkar Model Industrial Area.">
-<meta name="keywords" content="Blue Flow Enterprises, sanitary products, plumbing products, taps, bib cock, bathroom fittings, Ghaziabad">
+<meta name="description"
+content="Blue Flow Enterprises - Quality sanitary and plumbing products in Sahibabad, Ghaziabad.">
+
+<meta name="keywords"
+content="Blue Flow Enterprises, sanitary products, plumbing products, health faucet, soap dispenser, cassiya, bathroom fittings, Ghaziabad">
+
 <meta name="author" content="Blue Flow Enterprises">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -22,12 +29,13 @@ html{
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     background:#f5f8fc;
     color:#222;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
+
 header{
     position:sticky;
     top:0;
@@ -66,7 +74,8 @@ nav a:hover{
     color:#0877d1;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
 .hero{
     min-height:530px;
     display:flex;
@@ -121,7 +130,12 @@ nav a:hover{
     color:#fff;
 }
 
-/* COMMON */
+.btn:hover{
+    opacity:.9;
+}
+
+/* ================= COMMON ================= */
+
 section{
     padding:70px 20px;
 }
@@ -138,7 +152,8 @@ section{
     color:#0877d1;
 }
 
-/* ABOUT */
+/* ================= ABOUT ================= */
+
 .about{
     background:#fff;
 }
@@ -152,7 +167,8 @@ section{
     color:#555;
 }
 
-/* PRODUCTS */
+/* ================= PRODUCTS ================= */
+
 .products{
     background:#f5f8fc;
 }
@@ -172,23 +188,29 @@ section{
 }
 
 .product-card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-6px);
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
 }
 
+/* PRODUCT IMAGE */
+
 .product-image{
-    height:240px;
+    height:270px;
     background:#fff;
     display:flex;
     align-items:center;
     justify-content:center;
-    padding:10px;
+    padding:15px;
 }
 
 .product-image img{
     width:100%;
     height:100%;
     object-fit:contain;
+    display:block;
 }
+
+/* PRODUCT INFO */
 
 .product-info{
     padding:20px;
@@ -199,6 +221,7 @@ section{
     margin-bottom:10px;
     color:#222;
     font-size:20px;
+    line-height:1.4;
 }
 
 .product-info p{
@@ -217,7 +240,12 @@ section{
     font-weight:bold;
 }
 
-/* WHY US */
+.enquiry:hover{
+    background:#055da5;
+}
+
+/* ================= WHY US ================= */
+
 .why{
     background:#fff;
 }
@@ -238,6 +266,7 @@ section{
 .why-card h3{
     margin:15px 0 10px;
     color:#0877d1;
+    font-size:21px;
 }
 
 .why-card p{
@@ -245,7 +274,8 @@ section{
     line-height:1.6;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
+
 .contact{
     background:#eaf6ff;
 }
@@ -279,7 +309,8 @@ section{
     text-decoration:none;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer{
     background:#111;
     color:#fff;
@@ -295,27 +326,21 @@ footer p{
     color:#ccc;
 }
 
-/* TABLET */
-@media(max-width:900px){
+/* ================= TABLET ================= */
+
+@media(max-width:1000px){
 
     .product-grid{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .why-grid{
-        grid-template-columns:1fr;
-    }
-
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
-
     .hero h1{
-        font-size:42px;
+        font-size:45px;
     }
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
+
 @media(max-width:600px){
 
     .navbar{
@@ -337,6 +362,7 @@ footer p{
 
     .hero{
         min-height:450px;
+        padding:50px 15px;
     }
 
     .hero h1{
@@ -355,6 +381,10 @@ footer p{
         grid-template-columns:1fr;
     }
 
+    .product-image{
+        height:280px;
+    }
+
     section{
         padding:50px 15px;
     }
@@ -362,33 +392,48 @@ footer p{
     .section-title{
         font-size:30px;
     }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
+
 <header>
+
 <div class="navbar">
 
 <div class="logo">
-Blue Flow <span>Enterprises</span>
+    Blue Flow <span>Enterprises</span>
 </div>
 
 <nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#products">Products</a>
-<a href="#why">Why Us</a>
-<a href="#contact">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 </div>
+
 </header>
 
 
-<!-- HOME -->
+<!-- ================= HOME ================= -->
+
 <section class="hero" id="home">
 
 <div class="hero-content">
@@ -411,7 +456,9 @@ View Products
 <a class="btn btn-whatsapp"
 href="https://wa.me/919354352599?text=Hello%20Blue%20Flow%20Enterprises,%20I%20want%20to%20know%20about%20your%20products."
 target="_blank">
+
 WhatsApp Enquiry
+
 </a>
 
 </div>
@@ -421,7 +468,8 @@ WhatsApp Enquiry
 </section>
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
+
 <section class="about" id="about">
 
 <div class="container">
@@ -453,7 +501,8 @@ Sahibabad, Ghaziabad, Uttar Pradesh – 201010.
 </section>
 
 
-<!-- PRODUCTS -->
+<!-- ================= PRODUCTS ================= -->
+
 <section class="products" id="products">
 
 <div class="container">
@@ -466,29 +515,29 @@ Our Products
 
 
 <!-- PRODUCT 1 -->
+
 <div class="product-card">
 
 <div class="product-image">
 
 <img
-src="long-body-bib-cock-500x500.jpg"
-alt="Blue Flow Enterprises Long Body Bib Cock">
+src="health-faucet-gun.jpg"
+alt="Blue Flow Premium SS 304 Health Faucet Gun Only">
 
 </div>
 
 <div class="product-info">
 
 <h3>
-Blue Flow Long Body Bib Cock
+Blue Flow Premium SS 304 Health Faucet Gun Only
 </h3>
 
 <p>
-Premium quality chrome finish
-long body bib cock.
+Premium quality SS 304 health faucet gun.
 </p>
 
 <a class="enquiry"
-href="https://wa.me/919354352599?text=Hello%20Blue%20Flow%20Enterprises,%20I%20want%20details%20about%20Long%20Body%20Bib%20Cock."
+href="https://wa.me/919354352599?text=Hello%20Blue%20Flow%20Enterprises,%20I%20want%20details%20about%20Blue%20Flow%20Premium%20SS%20304%20Health%20Faucet%20Gun%20Only."
 target="_blank">
 
 Enquire Now
@@ -501,29 +550,29 @@ Enquire Now
 
 
 <!-- PRODUCT 2 -->
+
 <div class="product-card">
 
 <div class="product-image">
 
-<div style="color:#999;text-align:center;">
-Product 2<br>
-Photo Coming Soon
-</div>
+<img
+src="liquid-soap-dispenser-white.jpg"
+alt="Blue Flow Liquid Soap Sanitizer Dispenser White">
 
 </div>
 
 <div class="product-info">
 
 <h3>
-Product 2
+Blue Flow Liquid Soap Sanitizer Dispenser White
 </h3>
 
 <p>
-Quality sanitary product.
+Stylish and durable white liquid soap sanitizer dispenser.
 </p>
 
 <a class="enquiry"
-href="https://wa.me/919354352599?text=Hello%20Blue%20Flow%20Enterprises,%20I%20want%20details%20about%20Product%202."
+href="https://wa.me/919354352599?text=Hello%20Blue%20Flow%20Enterprises,%20I%20want%20details%20about%20Blue%20Flow%20Liquid%20Soap%20Sanitizer%20Dispenser%20White."
 target="_blank">
 
 Enquire Now
@@ -536,29 +585,29 @@ Enquire Now
 
 
 <!-- PRODUCT 3 -->
+
 <div class="product-card">
 
 <div class="product-image">
 
-<div style="color:#999;text-align:center;">
-Product 3<br>
-Photo Coming Soon
-</div>
+<img
+src="liquid-soap-dispenser-black.jpg"
+alt="Blue Flow Liquid Soap Sanitizer Dispenser Black">
 
 </div>
 
 <div class="product-info">
 
 <h3>
-Product 3
+Blue Flow Liquid Soap Sanitizer Dispenser Black
 </h3>
 
 <p>
-Quality plumbing product.
+Premium black liquid soap sanitizer dispenser.
 </p>
 
 <a class="enquiry"
-href="https://wa.me/919354352599?text=Hello%20Blue%20Flow%20Enterprises,%20I%20want%20details%20about%20Product%203."
+href="https://wa.me/919354352599?text=Hello%20Blue%20Flow%20Enterprises,%20I%20want%20details%20about%20Blue%20Flow%20Liquid%20Soap%20Sanitizer%20Dispenser%20Black."
 target="_blank">
 
 Enquire Now
@@ -571,29 +620,29 @@ Enquire Now
 
 
 <!-- PRODUCT 4 -->
+
 <div class="product-card">
 
 <div class="product-image">
 
-<div style="color:#999;text-align:center;">
-Product 4<br>
-Photo Coming Soon
-</div>
+<img
+src="long-body-cassiya.jpg"
+alt="Blue Flow Long Body Cassiya">
 
 </div>
 
 <div class="product-info">
 
 <h3>
-Product 4
+Long Body Cassiya
 </h3>
 
 <p>
-Premium sanitary product.
+Quality long body cassiya for sanitary and plumbing use.
 </p>
 
 <a class="enquiry"
-href="https://wa.me/919354352599?text=Hello%20Blue%20Flow%20Enterprises,%20I%20want%20details%20about%20Product%204."
+href="https://wa.me/919354352599?text=Hello%20Blue%20Flow%20Enterprises,%20I%20want%20details%20about%20Long%20Body%20Cassiya."
 target="_blank">
 
 Enquire Now
@@ -612,7 +661,8 @@ Enquire Now
 </section>
 
 
-<!-- WHY US -->
+<!-- ================= WHY US ================= -->
+
 <section class="why" id="why">
 
 <div class="container">
@@ -622,6 +672,7 @@ Why Choose Blue Flow Enterprises?
 </h2>
 
 <div class="why-grid">
+
 
 <div class="why-card">
 
@@ -664,6 +715,7 @@ phone or WhatsApp.
 
 </div>
 
+
 </div>
 
 </div>
@@ -671,7 +723,8 @@ phone or WhatsApp.
 </section>
 
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
+
 <section class="contact" id="contact">
 
 <div class="container">
@@ -700,6 +753,7 @@ Uttar Pradesh – 201010
 
 </p>
 
+
 <p>
 
 <strong>Phone:</strong><br>
@@ -710,12 +764,13 @@ Uttar Pradesh – 201010
 
 </p>
 
+
 <p>
 
 <strong>Email:</strong><br>
 
-<a href="mailto:BlueFlowEnterprises@gmail.com">
-BlueFlowEnterprises@gmail.com
+<a href="mailto:blueflowenterprises@gmail.com">
+blueflowenterprises@gmail.com
 </a>
 
 </p>
@@ -744,6 +799,7 @@ Chat on WhatsApp
 
 </div>
 
+
 </div>
 
 </div>
@@ -751,7 +807,8 @@ Chat on WhatsApp
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
 <p>
@@ -771,5 +828,8 @@ Sahibabad, Ghaziabad, Uttar Pradesh – 201010
 
 </footer>
 
+
 </body>
+
 </html>
+```

@@ -3,205 +3,642 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blue Flow Enterprises | Sanitary & Plumbing Products</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Blue Flow Enterprises | Premium Sanitary & Bath Fittings</title>
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
-    body { background-color: #f4f7f6; color: #333; }
-    header { background: #0b3c5d; color: #fff; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-    header h1 { font-size: 24px; color: #328cc1; }
-    header p { font-size: 13px; color: #d9e2ec; }
-    .btn-top { background: #25d366; color: white; padding: 10px 18px; border-radius: 5px; text-decoration: none; font-weight: bold; }
-    
-    .hero { background: #1d2731; color: white; text-align: center; padding: 40px 20px; }
-    .hero h2 { font-size: 28px; margin-bottom: 10px; color: #328cc1; }
-    .hero p { font-size: 16px; max-width: 700px; margin: auto; }
+    :root {
+      --primary-dark: #071527;
+      --secondary-dark: #0f2744;
+      --accent-blue: #0088ff;
+      --accent-cyan: #00d2ff;
+      --gold: #d4af37;
+      --gold-light: #f3e5ab;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --bg-light: #f8fafc;
+      --card-bg: #ffffff;
+      --whatsapp-color: #25d366;
+    }
 
-    .container { max-width: 1200px; margin: 30px auto; padding: 0 15px; }
-    .section-title { text-align: center; margin-bottom: 30px; font-size: 26px; color: #0b3c5d; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      scroll-behavior: smooth;
+    }
 
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-    .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08); display: flex; flex-direction: column; }
-    .card img { width: 100%; height: 260px; object-fit: contain; background: #fff; border-bottom: 1px solid #eee; }
-    .card-body { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-    .card-title { font-size: 16px; font-weight: 600; color: #1d2731; margin-bottom: 8px; }
-    .price { font-size: 18px; font-weight: 700; color: #d9534f; margin-bottom: 15px; }
-    .btn-order { display: block; text-align: center; background: #0b3c5d; color: white; padding: 10px; border-radius: 5px; text-decoration: none; font-size: 14px; font-weight: 600; }
-    .btn-order:hover { background: #328cc1; }
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      overflow-x: hidden;
+    }
 
-    .info-box { background: white; border-radius: 8px; padding: 25px; margin-top: 40px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-    .info-box h3 { color: #0b3c5d; margin-bottom: 15px; border-bottom: 2px solid #328cc1; padding-bottom: 5px; display: inline-block; }
-    .info-box p { margin: 8px 0; font-size: 14px; line-height: 1.6; }
+    /* Top Utility Bar */
+    .top-bar {
+      background: var(--primary-dark);
+      color: #94a3b8;
+      padding: 8px 5%;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .top-bar a {
+      color: #e2e8f0;
+      text-decoration: none;
+      margin-left: 15px;
+      transition: color 0.2s;
+    }
+    .top-bar a:hover {
+      color: var(--accent-cyan);
+    }
 
-    footer { background: #0b3c5d; color: #fff; text-align: center; padding: 20px; margin-top: 40px; font-size: 13px; }
+    /* Main Navigation Header */
+    header {
+      background: rgba(15, 39, 68, 0.95);
+      backdrop-filter: blur(12px);
+      padding: 16px 5%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-container h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 24px;
+      letter-spacing: 1.5px;
+      background: linear-gradient(135deg, #ffffff 0%, var(--gold-light) 60%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+    }
+    .logo-container span {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent-cyan);
+      display: block;
+      font-weight: 600;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 12px;
+    }
+    .action-btn {
+      padding: 9px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+    }
+    .action-btn.wa {
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: white;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+    }
+    .action-btn.mail {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+    .action-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      background: radial-gradient(circle at 80% 20%, #1e3a5f 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 90px 20px 80px;
+      text-align: center;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background: linear-gradient(to top, var(--bg-light), transparent);
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .hero h2 {
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 15px;
+      background: linear-gradient(to right, #ffffff, #c7d2fe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 16px;
+      color: #94a3b8;
+      max-width: 650px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-item h4 {
+      font-size: 22px;
+      color: var(--gold);
+    }
+    .stat-item p {
+      font-size: 12px;
+      color: #94a3b8;
+      margin: 0;
+    }
+
+    /* Product Grid Section */
+    .container {
+      max-width: 1280px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+    .section-header h3 {
+      font-size: 32px;
+      color: var(--secondary-dark);
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 12px;
+    }
+    .section-header h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(to right, var(--accent-blue), var(--gold));
+      border-radius: 3px;
+    }
+    .section-header p {
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-size: 15px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 28px;
+    }
+
+    /* Product Card */
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 35px rgba(15, 39, 68, 0.12);
+      border-color: rgba(0, 136, 255, 0.3);
+    }
+    .card-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: rgba(15, 39, 68, 0.85);
+      color: var(--gold-light);
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      border-radius: 6px;
+      backdrop-filter: blur(4px);
+      z-index: 2;
+    }
+    .img-box {
+      width: 100%;
+      height: 290px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      border-bottom: 1px solid #f1f5f9;
+      position: relative;
+    }
+    .img-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.4s ease;
+    }
+    .card:hover .img-box img {
+      transform: scale(1.05);
+    }
+
+    .card-body {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .brand-tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent-blue);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+    .card-title {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--secondary-dark);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .price-box {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+    .price-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .price {
+      font-size: 22px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    /* Card Action Buttons */
+    .card-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .card-btn {
+      padding: 10px 8px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .card-btn.wa-btn {
+      background: #25d366;
+      color: white;
+    }
+    .card-btn.wa-btn:hover {
+      background: #1eb857;
+    }
+    .card-btn.mail-btn {
+      background: #f1f5f9;
+      color: var(--secondary-dark);
+      border: 1px solid #cbd5e1;
+    }
+    .card-btn.mail-btn:hover {
+      background: #e2e8f0;
+      color: #000;
+    }
+
+    /* Company Overview Card */
+    .business-card {
+      background: linear-gradient(135deg, #0f2744 0%, #071527 100%);
+      color: white;
+      border-radius: 20px;
+      padding: 40px;
+      margin-top: 60px;
+      box-shadow: 0 15px 35px rgba(7, 21, 39, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+    .business-card::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(0, 136, 255, 0.2), transparent 70%);
+      border-radius: 50%;
+    }
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      position: relative;
+      z-index: 1;
+    }
+    .b-item h4 {
+      color: var(--gold-light);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .b-item p, .b-item a {
+      color: #e2e8f0;
+      font-size: 15px;
+      text-decoration: none;
+      line-height: 1.5;
+    }
+    .b-item a:hover {
+      color: var(--accent-cyan);
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-wa {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+      text-decoration: none;
+      z-index: 999;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .floating-wa:hover {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.7);
+    }
+
+    /* Footer */
+    footer {
+      background: #040d18;
+      color: #64748b;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 13px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    @media (max-width: 768px) {
+      .top-bar { display: none; }
+      .hero h2 { font-size: 28px; }
+      .header-actions .action-btn.mail { display: none; }
+      .card-buttons { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
 
-  <header>
+  <!-- Top Info Bar -->
+  <div class="top-bar">
     <div>
-      <h1>Blue Flow Enterprises</h1>
-      <p>सैनिटरी एवं प्लंबिंग उत्पाद | Brand: Blue Flow</p>
+      <span><i class="fa-solid fa-certificate" style="color: var(--gold);"></i> GST Registered: <strong>09KPDPK5769E1ZD</strong></span>
     </div>
-    <a href="https://wa.me/918076082599?text=Namaste,%20mujhe%20products%20ke%20bare%20mein%20puchna%20hai" class="btn-top" target="_blank">WhatsApp Order</a>
+    <div>
+      <a href="tel:8076082599"><i class="fa-solid fa-phone"></i> +91 8076082599</a>
+      <a href="mailto:blueflowenterprises@gmail.com"><i class="fa-solid fa-envelope"></i> blueflowenterprises@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header>
+    <div class="logo-container">
+      <h1>BLUE FLOW</h1>
+      <span>ENTERPRISES</span>
+    </div>
+    <div class="header-actions">
+      <a href="mailto:blueflowenterprises@gmail.com?subject=Enquiry%20from%20Blue%20Flow%20Website" class="action-btn mail">
+        <i class="fa-solid fa-envelope"></i> Email Us
+      </a>
+      <a href="https://wa.me/918076082599?text=Namaste%20Blue%20Flow,%20mujhe%20aapke%20products%20ke%20bare%20mein%20enquiry%20karni%20hai" class="action-btn wa" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+    </div>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
-    <h2>Premium Sanitary & Plumbing Solutions</h2>
-    <p>उच्च गुणवत्ता, टिकाऊ और स्टाइलिश बाथरूम फिटिंग्स एवं सैनिटरी उत्पाद। सीधे निर्माता एवं सप्लायर से संपर्क करें।</p>
+    <div class="hero-badge">Architectural & Sanitary Solutions</div>
+    <h2>Flow With Trust & Timeless Elegance</h2>
+    <p>High-precision plumbing brassware, stainless steel health faucets, aur luxury bathroom accessories direct manufacturer standard par.</p>
+    
+    <div class="hero-stats">
+      <div class="stat-item">
+        <h4>100%</h4>
+        <p>Premium Quality</p>
+      </div>
+      <div class="stat-item">
+        <h4>SS 304 & Brass</h4>
+        <p>Solid Construction</p>
+      </div>
+      <div class="stat-item">
+        <h4>Direct Supply</h4>
+        <p>Sahibabad, Ghaziabad</p>
+      </div>
+    </div>
   </section>
 
+  <!-- Products Section -->
   <div class="container">
-    <h3 class="section-title">हमारे उत्पाद (Our Products)</h3>
+    <div class="section-header">
+      <h3>Exclusive Product Catalogue</h3>
+      <p>Click below to enquire directly on WhatsApp or Email</p>
+    </div>
+
     <div class="grid">
 
       <!-- Product 1 -->
       <div class="card">
-        <img src="Screenshot_20261014_150846_Chrome.jpg" alt="Health Faucet Pack of 3">
+        <span class="card-badge">Pack of 3</span>
+        <div class="img-box">
+          <img src="Screenshot_20261014_150846_Chrome.jpg" alt="SS Health Faucet Pack of 3">
+        </div>
         <div class="card-body">
-          <div class="card-title">Stainless Steel Health Faucet (Pack of 3)</div>
-          <div class="price">MRP ₹2,249</div>
-          <a href="https://wa.me/918076082599?text=Mujhe%20Health%20Faucet%20Pack%20of%203%20chahiye" class="btn-order" target="_blank">Order on WhatsApp</a>
+          <div>
+            <div class="brand-tag">Blue Flow Sanitary</div>
+            <div class="card-title">Stainless Steel Health Faucet (Pack of 3)</div>
+          </div>
+          <div>
+            <div class="price-box">
+              <span class="price-label">MRP</span>
+              <span class="price">₹2,249</span>
+            </div>
+            <div class="card-buttons">
+              <a href="https://wa.me/918076082599?text=Namaste,%20mujhe%20Stainless%20Steel%20Health%20Faucet%20(Pack%20of%203)%20MRP%20Rs.2249%20ke%20bare%20mein%20enquiry%20karni%20hai." class="card-btn wa-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+              <a href="mailto:blueflowenterprises@gmail.com?subject=Enquiry%20for%20Stainless%20Steel%20Health%20Faucet%20(Pack%20of%203)&body=Namaste,%20mujhe%20is%20product%20ki%20details%20aur%20order%20process%20bataiye." class="card-btn mail-btn"><i class="fa-solid fa-envelope"></i> Email</a>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Product 2 -->
       <div class="card">
-        <img src="1000459044.jpg" alt="Liquid Soap Dispenser White">
+        <span class="card-badge">Pack of 1</span>
+        <div class="img-box">
+          <img src="1000459044.jpg" alt="Liquid Soap Dispenser White">
+        </div>
         <div class="card-body">
-          <div class="card-title">Liquid Soap & Sanitizer Dispenser White (Pack of 1)</div>
-          <div class="price">MRP ₹999</div>
-          <a href="https://wa.me/918076082599?text=Mujhe%20Liquid%20Soap%20Dispenser%20White%20Pack%20of%201%20chahiye" class="btn-order" target="_blank">Order on WhatsApp</a>
+          <div>
+            <div class="brand-tag">Blue Flow Hygiene</div>
+            <div class="card-title">Liquid Soap & Sanitizer Dispenser White (Pack of 1)</div>
+          </div>
+          <div>
+            <div class="price-box">
+              <span class="price-label">MRP</span>
+              <span class="price">₹999</span>
+            </div>
+            <div class="card-buttons">
+              <a href="https://wa.me/918076082599?text=Namaste,%20mujhe%20Liquid%20Soap%20Dispenser%20White%20(Pack%20of%201)%20MRP%20Rs.999%20ke%20bare%20mein%20enquiry%20karni%20hai." class="card-btn wa-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+              <a href="mailto:blueflowenterprises@gmail.com?subject=Enquiry%20for%20White%20Liquid%20Soap%20Dispenser%20(Pack%20of%201)&body=Namaste,%20mujhe%20is%20dispenser%20ke%20bare%20mein%20enquiry%20karni%20hai." class="card-btn mail-btn"><i class="fa-solid fa-envelope"></i> Email</a>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Product 3 -->
       <div class="card">
-        <img src="1000459046.jpg" alt="Flora Long Body">
+        <span class="card-badge">Pack of 1</span>
+        <div class="img-box">
+          <img src="1000459046.jpg" alt="Flora Long Body Tap">
+        </div>
         <div class="card-body">
-          <div class="card-title">Flora Long Body Bib Cock (Pack of 1)</div>
-          <div class="price">MRP ₹1,249</div>
-          <a href="https://wa.me/918076082599?text=Mujhe%20Flora%20Long%20Body%20Pack%20of%201%20chahiye" class="btn-order" target="_blank">Order on WhatsApp</a>
+          <div>
+            <div class="brand-tag">Blue Flow Faucets</div>
+            <div class="card-title">Flora Long Body Bib Cock (Pack of 1)</div>
+          </div>
+          <div>
+            <div class="price-box">
+              <span class="price-label">MRP</span>
+              <span class="price">₹1,249</span>
+            </div>
+            <div class="card-buttons">
+              <a href="https://wa.me/918076082599?text=Namaste,%20mujhe%20Flora%20Long%20Body%20Bib%20Cock%20(Pack%20of%201)%20MRP%20Rs.1249%20chahiye." class="card-btn wa-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+              <a href="mailto:blueflowenterprises@gmail.com?subject=Enquiry%20for%20Flora%20Long%20Body%20Bib%20Cock%20(Pack%20of%201)&body=Namaste,%20mujhe%20Flora%20Long%20Body%20ke%20bare%20mein%20puchna%20hai." class="card-btn mail-btn"><i class="fa-solid fa-envelope"></i> Email</a>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Product 4 -->
       <div class="card">
-        <img src="Screenshot_20261014_151148_Chrome.jpg" alt="Flora Long Body Pack of 2">
+        <span class="card-badge">Pack of 2</span>
+        <div class="img-box">
+          <img src="Screenshot_20261014_151148_Chrome.jpg" alt="Flora Long Body Pack of 2">
+        </div>
         <div class="card-body">
-          <div class="card-title">Flora Long Body Bib Cock (Pack of 2)</div>
-          <div class="price">MRP ₹2,499</div>
-          <a href="https://wa.me/918076082599?text=Mujhe%20Flora%20Long%20Body%20Pack%20of%202%20chahiye" class="btn-order" target="_blank">Order on WhatsApp</a>
+          <div>
+            <div class="brand-tag">Blue Flow Faucets</div>
+            <div class="card-title">Flora Long Body Bib Cock (Pack of 2)</div>
+          </div>
+          <div>
+            <div class="price-box">
+              <span class="price-label">MRP</span>
+              <span class="price">₹2,499</span>
+            </div>
+            <div class="card-buttons">
+              <a href="https://wa.me/918076082599?text=Namaste,%20mujhe%20Flora%20Long%20Body%20Bib%20Cock%20(Pack%20of%202)%20MRP%20Rs.2499%20chahiye." class="card-btn wa-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+              <a href="mailto:blueflowenterprises@gmail.com?subject=Enquiry%20for%20Flora%20Long%20Body%20Bib%20Cock%20(Pack%20of%202)&body=Namaste,%20is%20combo%20pack%20ki%20availability%20bataiye." class="card-btn mail-btn"><i class="fa-solid fa-envelope"></i> Email</a>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Product 5 -->
       <div class="card">
-        <img src="Screenshot_20261014_151236_Chrome.jpg" alt="Fussion Dual Tap Pack of 2">
+        <span class="card-badge">Pack of 2</span>
+        <div class="img-box">
+          <img src="Screenshot_20261014_151236_Chrome.jpg" alt="Fussion Dual Tap Pack of 2">
+        </div>
         <div class="card-body">
-          <div class="card-title">Fussion Long Body Dual Tap (Pack of 2)</div>
-          <div class="price">MRP ₹2,499</div>
-          <a href="https://wa.me/918076082599?text=Mujhe%20Fussion%20Dual%20Tap%20Pack%20of%202%20chahiye" class="btn-order" target="_blank">Order on WhatsApp</a>
+          <div>
+            <div class="brand-tag">Blue Flow Faucets</div>
+            <div class="card-title">Fussion Long Body Dual Tap (Pack of 2)</div>
+          </div>
+          <div>
+            <div class="price-box">
+              <span class="price-label">MRP</span>
+              <span class="price">₹2,499</span>
+            </div>
+            <div class="card-buttons">
+              <a href="https://wa.me/918076082599?text=Namaste,%20mujhe%20Fussion%20Long%20Body%20Dual%20Tap%20(Pack%20of%202)%20MRP%20Rs.2499%20ke%20bare%20mein%20enquiry%20karni%20hai." class="card-btn wa-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+              <a href="mailto:blueflowenterprises@gmail.com?subject=Enquiry%20for%20Fussion%20Long%20Body%20Dual%20Tap%20(Pack%20of%202)&body=Namaste,%20mujhe%20Fussion%20Dual%20Tap%20order%20karna%20hai." class="card-btn mail-btn"><i class="fa-solid fa-envelope"></i> Email</a>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Product 6 -->
       <div class="card">
-        <img src="Screenshot_20261014_151320_Chrome.jpg" alt="ADMIX Lumi Pack of 2">
-        <div class="card-body">
-          <div class="card-title">ADMIX Lumi Long Body Tap (Pack of 2)</div>
-          <div class="price">MRP ₹2,649</div>
-          <a href="https://wa.me/918076082599?text=Mujhe%20ADMIX%20Lumi%20Pack%20of%202%20chahiye" class="btn-order" target="_blank">Order on WhatsApp</a>
+        <span class="card-badge">Pack of 2</span>
+        <div class="img-box">
+          <img src="Screenshot_20261014_151320_Chrome.jpg" alt="ADMIX Lumi Pack of 2">
         </div>
-      </div>
-
-      <!-- Product 7 -->
-      <div class="card">
-        <img src="Screenshot_20261014_151417_Chrome.jpg" alt="ADMIX Lumi Pack of 1">
         <div class="card-body">
-          <div class="card-title">ADMIX Lumi Long Body Tap (Pack of 1)</div>
-          <div class="price">MRP ₹1,349</div>
-          <a href="https://wa.me/918076082599?text=Mujhe%20ADMIX%20Lumi%20Pack%20of%201%20chahiye" class="btn-order" target="_blank">Order on WhatsApp</a>
-        </div>
-      </div>
-
-      <!-- Product 8 -->
-      <div class="card">
-        <img src="Screenshot_20261014_151509_Chrome.jpg" alt="Vignnet Long Body">
-        <div class="card-body">
-          <div class="card-title">Vignnet Long Body Bib Cock (Pack of 1)</div>
-          <div class="price">MRP ₹1,249</div>
-          <a href="https://wa.me/918076082599?text=Mujhe%20Vignnet%20Long%20Body%20Pack%20of%201%20chahiye" class="btn-order" target="_blank">Order on WhatsApp</a>
-        </div>
-      </div>
-
-      <!-- Product 9 -->
-      <div class="card">
-        <img src="Screenshot_20261014_151654_Chrome.jpg" alt="Chocolate Long Body Pack of 2">
-        <div class="card-body">
-          <div class="card-title">Chocolate Long Body Bib Cock (Pack of 2)</div>
-          <div class="price">MRP ₹2,499</div>
-          <a href="https://wa.me/918076082599?text=Mujhe%20Chocolate%20Long%20Body%20Pack%20of%202%20chahiye" class="btn-order" target="_blank">Order on WhatsApp</a>
-        </div>
-      </div>
-
-      <!-- Product 10 -->
-      <div class="card">
-        <img src="Screenshot_20261014_151815_Chrome.jpg" alt="Liquid Soap Dispenser White Pack of 2">
-        <div class="card-body">
-          <div class="card-title">Liquid Soap Dispenser White (Pack of 2)</div>
-          <div class="price">MRP ₹1,999</div>
-          <a href="https://wa.me/918076082599?text=Mujhe%20Liquid%20Soap%20Dispenser%20White%20Pack%20of%202%20chahiye" class="btn-order" target="_blank">Order on WhatsApp</a>
-        </div>
-      </div>
-
-      <!-- Product 11 -->
-      <div class="card">
-        <img src="Screenshot_20261014_151854_Chrome.jpg" alt="Liquid Soap Dispenser Black Pack of 2">
-        <div class="card-body">
-          <div class="card-title">Liquid Soap Dispenser Matte Black (Pack of 2)</div>
-          <div class="price">MRP ₹1,999</div>
-          <a href="https://wa.me/918076082599?text=Mujhe%20Liquid%20Soap%20Dispenser%20Black%20Pack%20of%202%20chahiye" class="btn-order" target="_blank">Order on WhatsApp</a>
-        </div>
-      </div>
-
-      <!-- Product 12 -->
-      <div class="card">
-        <img src="Screenshot_20261014_151924_Chrome.jpg" alt="Health Faucet and Dispenser Combo">
-        <div class="card-body">
-          <div class="card-title">Bathroom Essentials Combo (SS Health Faucet + White Dispenser)</div>
-          <div class="price">MRP ₹1,749</div>
-          <a href="https://wa.me/918076082599?text=Mujhe%20Health%20Faucet%20and%20Dispenser%20Combo%20chahiye" class="btn-order" target="_blank">Order on WhatsApp</a>
-        </div>
-      </div>
-
-      <!-- Product 13 -->
-      <div class="card">
-        <img src="Screenshot_20261014_152021_Chrome.jpg" alt="Black and White Soap Dispenser Combo">
-        <div class="card-body">
-          <div class="card-title">Black & White Liquid Soap Dispenser Combo (Pack of 2)</div>
-          <div class="price">MRP ₹1,999</div>
-          <a href="https://wa.me/918076082599?text=Mujhe%20Black%20and%20White%20Dispenser%20Combo%20chahiye" class="btn-order" target="_blank">Order on WhatsApp</a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Company Details Box -->
-    <div class="info-box">
-      <h3>कंपनी विवरण (Business Details)</h3>
-      <p><strong>कंपनी का नाम:</strong> Blue Flow Enterprises</p>
-      <p><strong>ब्रांड:</strong> Blue Flow</p>
-      <p><strong>GSTIN:</strong> 09KPDPK5769E1ZD</p>
-      <p><strong>पता:</strong> प्लॉट नंबर 180, Karkard/Kadkad Model Industrial Area, Sahibabad, Ghaziabad, Uttar Pradesh – 201010, India</p>
-      <p><strong>ईमेल:</strong> <a href="mailto:blueflowenterprises@gmail.com">blueflowenterprises@gmail.com</a></p>
-      <p><strong>मोबाइल / WhatsApp:</strong> <a href="tel:8076082599">8076082599</a></p>
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2026 Blue Flow Enterprises. All Rights Reserved.
-  </footer>
-
-</body>
-</html>
+          <div>
+            <div class="brand-tag">Designer Series</div>
+            <div class="card-title">ADMIX Lumi Long Body Tap (Pack of 2)</div>
+          </div>
+          <div>
+            <div class="price-box">
+              <span class="price-label">MRP</span>
+              <span class="price">₹2,649</span>
+            </div>
+            <div class="

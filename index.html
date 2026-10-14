@@ -613,10 +613,11 @@
     <div class="review-section" id="reviews">
       <div class="section-header" style="margin-bottom: 20px;">
         <h3>Customer Reviews & Ratings</h3>
-        <p>Hamare santusht grahakon ke anubhav</p>
+        <p>Hamare santusht grahakon ke anubhav (Live from Google Sheet)</p>
       </div>
 
       <div class="review-grid" id="reviewsContainer">
+        <!-- Default Pre-loaded Reviews -->
         <div class="review-item">
           <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
           <div class="review-text">"Health faucet ki quality aur finish ekdum zabardast hai. Water pressure bhi bohot achha banata hai."</div>
@@ -697,26 +698,40 @@
   </footer>
 
   <script>
+    // Aapka Google Apps Script Web App URL
+    const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbxwX_wcBep1kYVF7vkdX7_YaHwE_uCyq7ozw3LD-pvytliNfgAq-hbQGIQSfhhY3GbYrw/exec";
+
+    // Google Sheet se live reviews load karna
     function loadSavedReviews() {
-      const saved = JSON.parse(localStorage.getItem('blueflow_reviews') || '[]');
-      const container = document.getElementById('reviewsContainer');
-      saved.forEach(r => {
-        let starsHtml = '';
-        for(let i=0; i<r.rating; i++) { starsHtml += '<i class="fa-solid fa-star"></i>'; }
-        const div = document.createElement('div');
-        div.className = 'review-item';
-        div.innerHTML = `
-          <div class="stars">${starsHtml}</div>
-          <div class="review-text">"${r.comment}"</div>
-          <div class="review-author">${r.name}</div>
-          <div class="review-city">${r.city}</div>
-        `;
-        container.prepend(div);
-      });
+      fetch(GOOGLE_SHEET_URL)
+        .then(response => response.json())
+        .then(data => {
+          if (!data || data.length === 0) return;
+          const container = document.getElementById('reviewsContainer');
+          
+          data.forEach(r => {
+            let starsHtml = '';
+            for(let i = 0; i < Number(r.rating); i++) { 
+              starsHtml += '<i class="fa-solid fa-star"></i>'; 
+            }
+            const div = document.createElement('div');
+            div.className = 'review-item';
+            div.innerHTML = `
+              <div class="stars">${starsHtml}</div>
+              <div class="review-text">"${r.comment}"</div>
+              <div class="review-author">${r.name}</div>
+              <div class="review-city">${r.city}</div>
+            `;
+            container.prepend(div);
+          });
+        })
+        .catch(err => console.log("Sheet review fetch notice:", err));
     }
 
+    // Naya Review Google Sheet mein save karna
     function submitReview(e) {
       e.preventDefault();
+      const submitBtn = document.querySelector('.btn-submit-review');
       const name = document.getElementById('custName').value.trim();
       const city = document.getElementById('custCity').value.trim();
       const rating = parseInt(document.getElementById('custRating').value);
@@ -724,25 +739,40 @@
 
       if(!name || !comment) return;
 
-      const newReview = { name, city, rating, comment };
-      const saved = JSON.parse(localStorage.getItem('blueflow_reviews') || '[]');
-      saved.unshift(newReview);
-      localStorage.setItem('blueflow_reviews', JSON.stringify(saved));
+      submitBtn.innerText = "Submitting...";
+      submitBtn.disabled = true;
 
-      let starsHtml = '';
-      for(let i=0; i<rating; i++) { starsHtml += '<i class="fa-solid fa-star"></i>'; }
+      const reviewData = { name, city, rating, comment };
 
-      const div = document.createElement('div');
-      div.className = 'review-item';
-      div.innerHTML = `
-        <div class="stars">${starsHtml}</div>
-        <div class="review-text">"${comment}"</div>
-        <div class="review-author">${name}</div>
-        <div class="review-city">${city}</div>
-      `;
-      document.getElementById('reviewsContainer').prepend(div);
-      document.getElementById('reviewForm').reset();
-      alert('Aapka review safaltapoorvak jod diya gaya hai!');
+      fetch(GOOGLE_SHEET_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(reviewData)
+      })
+      .then(() => {
+        let starsHtml = '';
+        for(let i = 0; i < rating; i++) { starsHtml += '<i class="fa-solid fa-star"></i>'; }
+
+        const div = document.createElement('div');
+        div.className = 'review-item';
+        div.innerHTML = `
+          <div class="stars">${starsHtml}</div>
+          <div class="review-text">"${comment}"</div>
+          <div class="review-author">${name}</div>
+          <div class="review-city">${city}</div>
+        `;
+        document.getElementById('reviewsContainer').prepend(div);
+        document.getElementById('reviewForm').reset();
+        submitBtn.innerText = "Submit Review";
+        submitBtn.disabled = false;
+        alert('Aapka review safaltapoorvak Google Sheet mein save ho gaya hai!');
+      })
+      .catch(err => {
+        alert("Review save karne mein dikkat aayi, kripya dubara koshish karein.");
+        submitBtn.innerText = "Submit Review";
+        submitBtn.disabled = false;
+      });
     }
 
     window.onload = loadSavedReviews;

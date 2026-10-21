@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blue Flow Enterprises | Premium Sanitary & Bath Fittings</title>
+  <title>Blue Flow Enterprises | Premium Sanitary & Brass Bath Fittings</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-dark: #070b14;
-      --card-bg: rgba(17, 25, 40, 0.82);
-      --glass-border: rgba(255, 255, 255, 0.1);
-      --primary: #0ea5e9;
-      --primary-dark: #0284c7;
-      --accent: #f59e0b;
+      --bg-dark: #120f0a;
+      --card-bg: rgba(26, 21, 14, 0.85);
+      --glass-border: rgba(212, 175, 55, 0.25);
+      --primary: #d4af37;
+      --primary-dark: #aa8c2c;
+      --accent: #e5c158;
       --success: #10b981;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
+      --text-main: #fcf8f2;
+      --text-muted: #d1c7bd;
     }
 
     * {
@@ -26,7 +26,7 @@
     }
 
     body {
-      background: radial-gradient(circle at top right, #0f2942, var(--bg-dark) 50%);
+      background: radial-gradient(circle at top right, #332712, var(--bg-dark) 60%);
       color: var(--text-main);
       line-height: 1.6;
       min-height: 100vh;
@@ -34,11 +34,11 @@
 
     /* Top Offer Banner */
     .offer-banner {
-      background: linear-gradient(90deg, #0284c7, #0ea5e9, #f59e0b);
-      color: #fff;
+      background: linear-gradient(90deg, #aa8c2c, #d4af37, #f3e5ab, #d4af37);
+      color: #1a150e;
       text-align: center;
-      padding: 8px 16px;
-      font-weight: 700;
+      padding: 9px 16px;
+      font-weight: 800;
       font-size: 0.9rem;
       letter-spacing: 0.5px;
     }
@@ -48,7 +48,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(7, 11, 20, 0.85);
+      background: rgba(18, 15, 10, 0.9);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--glass-border);
       padding: 14px 5%;
@@ -67,7 +67,7 @@
     .brand h1 {
       font-size: 1.45rem;
       font-weight: 800;
-      background: linear-gradient(90deg, #38bdf8, #f8fafc);
+      background: linear-gradient(90deg, #f3e5ab, #d4af37);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -111,8 +111,8 @@
 
     .discount-pill {
       display: inline-block;
-      background: rgba(245, 158, 11, 0.15);
-      border: 1px solid var(--accent);
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--primary);
       color: var(--accent);
       padding: 6px 16px;
       border-radius: 999px;
@@ -126,6 +126,7 @@
       font-weight: 800;
       margin-bottom: 14px;
       line-height: 1.25;
+      color: #f3e5ab;
     }
 
     .hero p {
@@ -135,11 +136,42 @@
       margin: 0 auto;
     }
 
+    /* Brass Highlights / Statistical Banner */
+    .stats-section {
+      max-width: 1240px;
+      margin: 10px auto 30px;
+      padding: 0 5%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .stat-card h4 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 4px;
+      font-weight: 800;
+    }
+
+    .stat-card p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
     /* Product Catalog */
     .container {
       max-width: 1240px;
       margin: 0 auto;
-      padding: 20px 5% 60px;
+      padding: 10px 5% 60px;
     }
 
     .section-title {
@@ -148,6 +180,7 @@
       margin-bottom: 24px;
       border-left: 4px solid var(--primary);
       padding-left: 12px;
+      color: #f3e5ab;
     }
 
     .product-grid {
@@ -170,20 +203,35 @@
     .product-card:hover {
       transform: translateY(-5px);
       border-color: var(--primary);
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.15);
     }
 
     .badge-off {
       position: absolute;
       top: 12px;
       left: 12px;
-      background: #ef4444;
-      color: #fff;
+      background: #aa8c2c;
+      color: #120f0a;
       font-size: 0.75rem;
       font-weight: 800;
       padding: 4px 10px;
       border-radius: 6px;
       z-index: 2;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .badge-brass {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(212, 175, 55, 0.2);
+      border: 1px solid var(--primary);
+      color: var(--accent);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      z-index: 2;
     }
 
     .img-wrap {
@@ -233,7 +281,7 @@
     .sale-price {
       font-size: 1.4rem;
       font-weight: 800;
-      color: #38bdf8;
+      color: #f3e5ab;
     }
 
     .mrp-price {
@@ -244,7 +292,7 @@
 
     .save-text {
       font-size: 0.78rem;
-      color: var(--success);
+      color: #34d399;
       font-weight: 600;
       margin-bottom: 16px;
     }
@@ -277,18 +325,18 @@
     }
 
     .btn-mail {
-      background: rgba(255, 255, 255, 0.08);
-      color: var(--text-main);
+      background: rgba(212, 175, 55, 0.12);
+      color: var(--accent);
       border: 1px solid var(--glass-border);
     }
 
     .btn-mail:hover {
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(212, 175, 55, 0.25);
     }
 
     /* Reviews Section */
     .reviews-section {
-      background: rgba(15, 23, 42, 0.7);
+      background: rgba(26, 21, 14, 0.7);
       border-top: 1px solid var(--glass-border);
       border-bottom: 1px solid var(--glass-border);
       padding: 50px 5%;
@@ -321,6 +369,7 @@
     .review-form-card h3 {
       margin-bottom: 16px;
       font-size: 1.2rem;
+      color: #f3e5ab;
     }
 
     .form-group {
@@ -341,7 +390,7 @@
       padding: 10px 12px;
       border-radius: 8px;
       border: 1px solid var(--glass-border);
-      background: rgba(7, 11, 20, 0.9);
+      background: rgba(18, 15, 10, 0.9);
       color: #fff;
       font-size: 0.9rem;
     }
@@ -349,16 +398,17 @@
     .btn-submit {
       width: 100%;
       background: var(--primary);
-      color: #fff;
+      color: #120f0a;
       border: none;
       padding: 12px;
       border-radius: 8px;
-      font-weight: 700;
+      font-weight: 800;
       cursor: pointer;
+      transition: 0.2s;
     }
 
     .btn-submit:hover {
-      background: var(--primary-dark);
+      background: var(--accent);
     }
 
     .reviews-list {
@@ -385,11 +435,11 @@
 
     .reviewer-name {
       font-weight: 700;
-      color: #38bdf8;
+      color: #f3e5ab;
     }
 
     .stars {
-      color: var(--accent);
+      color: var(--primary);
     }
 
     /* Footer */
@@ -410,9 +460,9 @@
 
     .gst-badge {
       display: inline-block;
-      background: rgba(14, 165, 233, 0.12);
-      color: #38bdf8;
-      border: 1px solid rgba(14, 165, 233, 0.3);
+      background: rgba(212, 175, 55, 0.15);
+      color: #f3e5ab;
+      border: 1px solid var(--primary);
       padding: 4px 12px;
       border-radius: 6px;
       font-weight: 600;
@@ -423,29 +473,49 @@
 <body>
 
   <div class="offer-banner">
-    🔥 SPECIAL FACTORY DIRECT SALE — FLAT 25% OFF ON ALL PRODUCTS! 🔥
+    👑 ROYAL BRASS & ANTIQUE COLLECTION — SPECIAL FACTORY DIRECT SALE: FLAT 25% OFF! 👑
   </div>
 
   <header>
     <div class="brand">
       <h1>BLUE FLOW ENTERPRISES</h1>
-      <span>Premium Sanitaryware & Bath Fittings | Sahibabad, Ghaziabad</span>
+      <span>Premium Brass & Sanitary Bath Fittings | Sahibabad, Ghaziabad</span>
     </div>
     <div class="nav-actions">
-      <a href="https://wa.me/918076082599?text=Hello%20Blue%20Flow%20Enterprises,%20I%20want%20to%20enquire%20about%20your%20products." target="_blank" class="btn-header btn-wa-top">
+      <a href="https://wa.me/918076082599?text=Hello%20Blue%20Flow%20Enterprises,%20I%20want%20to%20enquire%20about%20your%20brass%20collection." target="_blank" class="btn-header btn-wa-top">
         💬 WhatsApp: +91 8076082599
       </a>
     </div>
   </header>
 
   <section class="hero">
-    <div class="discount-pill">✨ FLAT 25% DISCOUNT LIVE NOW</div>
-    <h2>Upgrade Your Bathroom & Kitchen With Premium Quality Fittings</h2>
-    <p>High-grade Stainless Steel Health Faucets, Flexible Kitchen Sink Cocks, Long Body Bib Cocks, and Liquid Soap Dispensers at direct factory prices with Flat 25% OFF.</p>
+    <div class="discount-pill">✨ BRASS FINISH & ANTIQUE RANGE LIVE</div>
+    <h2>Elegance in Brass & Modern Sanitary Fittings</h2>
+    <p>Discover our exquisite range of heavy-duty brass fittings, antique designs, flexible kitchen cocks, and stainless steel health faucets with guaranteed durability.</p>
+  </section>
+
+  <!-- Statistical & Highlights Section -->
+  <section class="stats-section">
+    <div class="stat-card">
+      <h4>14+</h4>
+      <p>Premium Bath & Brass Products</p>
+    </div>
+    <div class="stat-card">
+      <h4>100%</h4>
+      <p>Heavy Duty Brass & SS Build</p>
+    </div>
+    <div class="stat-card">
+      <h4>Flat 25%</h4>
+      <p>Direct Factory Discount</p>
+    </div>
+    <div class="stat-card">
+      <h4>Pan India</h4>
+      <p>Trusted Supply & Support</p>
+    </div>
   </section>
 
   <main class="container">
-    <h2 class="section-title">Our Product Catalog (14 Products)</h2>
+    <h2 class="section-title">Our Exclusive Catalog (Brass & Sanitaryware)</h2>
     <div id="productGrid" class="product-grid"></div>
   </main>
 
@@ -470,7 +540,7 @@
           </div>
           <div class="form-group">
             <label for="comment">Your Feedback</label>
-            <textarea id="comment" rows="3" required placeholder="Share your experience with Blue Flow products..."></textarea>
+            <textarea id="comment" rows="3" required placeholder="Share your experience with Blue Flow brass & bath products..."></textarea>
           </div>
           <button type="submit" id="submitBtn" class="btn-submit">Submit Review</button>
           <p id="formStatus" style="margin-top:10px; font-size:0.85rem;"></p>
@@ -478,7 +548,7 @@
       </div>
 
       <div>
-        <h3 style="margin-bottom: 16px; font-size: 1.2rem;">💬 Live Customer Reviews</h3>
+        <h3 style="margin-bottom: 16px; font-size: 1.2rem; color: #f3e5ab;">💬 Live Customer Reviews</h3>
         <div id="reviewsList" class="reviews-list">
           <p style="color: var(--text-muted);">Loading live customer reviews...</p>
         </div>
@@ -488,7 +558,7 @@
 
   <footer>
     <div class="footer-details">
-      <strong style="color: #fff; font-size: 1.05rem;">BLUE FLOW ENTERPRISES</strong>
+      <strong style="color: #f3e5ab; font-size: 1.05rem;">BLUE FLOW ENTERPRISES</strong>
       <span>📍 Address: Plot No. 180, Karkar Model Industrial Area, Sahibabad, Ghaziabad, Uttar Pradesh - 201010</span>
       <span>📞 Phone / WhatsApp: +91 8076082599 | ✉️ Email: blueflowenterprises@gmail.com</span>
       <div><span class="gst-badge">GSTIN: 09KPDPK5769E1ZD</span></div>
@@ -507,12 +577,14 @@
         id: 1,
         name: "Stainless Steel Health Faucet (Pack of 3)",
         mrp: 2249,
+        tag: "SS Finish",
         img: "Screenshot_20261014_150846_Chrome.jpg"
       },
       {
         id: 2,
         name: "Liquid Soap & Sanitizer Dispenser White (Pack of 1)",
         mrp: 999,
+        tag: "Sanitary",
         img: "1000459044_2.jpg",
         fallbackImg: "Screenshot_20261014_151006_Chrome.jpg"
       },
@@ -520,6 +592,7 @@
         id: 3,
         name: "Flora Long Body Bib Cock (Pack of 1)",
         mrp: 1249,
+        tag: "Brass Core",
         img: "1000459046_2.jpg",
         fallbackImg: "Screenshot_20261014_151103_Chrome.jpg"
       },
@@ -527,66 +600,77 @@
         id: 4,
         name: "Flora Long Body Bib Cock (Pack of 2)",
         mrp: 2499,
+        tag: "Brass Core",
         img: "Screenshot_20261014_151148_Chrome.jpg"
       },
       {
         id: 5,
         name: "Fussion Long Body Dual Tap (Pack of 2)",
         mrp: 2499,
+        tag: "Brass Heavy",
         img: "Screenshot_20261014_151236_Chrome.jpg"
       },
       {
         id: 6,
         name: "ADMIX Lumi Long Body Tap (Pack of 2)",
         mrp: 2649,
+        tag: "Brass Finish",
         img: "Screenshot_20261014_151320_Chrome.jpg"
       },
       {
         id: 7,
         name: "ADMIX Lumi Long Body Tap (Pack of 1)",
         mrp: 1349,
+        tag: "Brass Finish",
         img: "Screenshot_20261014_151417_Chrome.jpg"
       },
       {
         id: 8,
         name: "Vignnet Long Body Bib Cock (Pack of 1)",
         mrp: 1249,
+        tag: "Antique Brass",
         img: "Screenshot_20261014_151509_Chrome.jpg"
       },
       {
         id: 9,
         name: "Chocolate Long Body Bib Cock (Pack of 2)",
         mrp: 2499,
+        tag: "Brass Core",
         img: "Screenshot_20261014_151654_Chrome.jpg"
       },
       {
         id: 10,
         name: "Liquid Soap Dispenser White (Pack of 2)",
         mrp: 1999,
+        tag: "Bathroom",
         img: "Screenshot_20261014_151815_Chrome.jpg"
       },
       {
         id: 11,
         name: "Liquid Soap Dispenser Matte Black (Pack of 2)",
         mrp: 1999,
+        tag: "Matte Series",
         img: "Screenshot_20261014_151854_Chrome.jpg"
       },
       {
         id: 12,
         name: "Bathroom Essentials Combo (SS Health Faucet + Dispenser)",
         mrp: 1749,
+        tag: "Combo Offer",
         img: "Screenshot_20261014_151924_Chrome.jpg"
       },
       {
         id: 13,
         name: "Black & White Liquid Soap Dispenser Combo (Pack of 2)",
         mrp: 1999,
+        tag: "Combo Offer",
         img: "Screenshot_20261014_152021_Chrome.jpg"
       },
       {
         id: 14,
         name: "Blue Flow Sink Cock with Opal Handle, Black Flexible",
         mrp: 2499,
+        tag: "Brass & Flexible",
         img: "Screenshot_20261021_144556_Chrome.jpg"
       }
     ];
@@ -613,6 +697,7 @@
       card.className = "product-card";
       card.innerHTML = `
         <span class="badge-off">${DISCOUNT_PERCENT}% OFF</span>
+        <span class="badge-brass">${item.tag || 'Brass Range'}</span>
         <div class="img-wrap">
           <img src="${item.img}" alt="${item.name}" loading="lazy" ${fallbackAttr} />
         </div>
@@ -648,7 +733,7 @@
               <span class="reviewer-name">${r.name || "Customer"}</span>
               <span class="stars">${"⭐".repeat(Number(r.rating) || 5)}</span>
             </div>
-            <p style="font-size:0.9rem; color:#e2e8f0;">${r.comment || ""}</p>
+            <p style="font-size:0.9rem; color:#fcf8f2;">${r.comment || ""}</p>
           </div>
         `).join("");
       } catch (err) {
@@ -661,35 +746,5 @@
       const status = document.getElementById("formStatus");
       const btn = document.getElementById("submitBtn");
       btn.disabled = true;
-      status.style.color = "#38bdf8";
-      status.textContent = "Submitting your review...";
-
-      const payload = {
-        name: document.getElementById("name").value.trim(),
-        rating: document.getElementById("rating").value,
-        comment: document.getElementById("comment").value.trim()
-      };
-
-      try {
-        await fetch(GOOGLE_SHEET_URL, {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload)
-        });
-        status.style.color = "#10b981";
-        status.textContent = "✅ Thank you! Your review has been submitted.";
-        document.getElementById("reviewForm").reset();
-        setTimeout(loadReviews, 1500);
-      } catch (error) {
-        status.style.color = "#ef4444";
-        status.textContent = "Could not submit review. Please try again.";
-      } finally {
-        btn.disabled = false;
-      }
-    });
-
-    loadReviews();
-  </script>
-</body>
-</html>
+      status.style.color = "#d4af37";
+    

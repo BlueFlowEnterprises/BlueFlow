@@ -215,9 +215,7 @@
     }
 
     .img-wrap img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
+      max-width: 100%; max-height: 100%; object-fit: contain;
     }
 
     .card-body {
@@ -278,7 +276,7 @@
       background: var(--accent);
     }
 
-    /* Modal Popup for Multiple Images & Direct Buy */
+    /* Modal Popup */
     .modal-overlay {
       position: fixed;
       top: 0; left: 0; width: 100%; height: 100%;
@@ -334,9 +332,7 @@
       margin-bottom: 10px;
     }
 
-    .modal-main-img img {
-      max-width: 100%; max-height: 100%; object-fit: contain;
-    }
+    .modal-main-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
     .thumbnail-row {
       display: flex;
@@ -413,9 +409,7 @@
       <button class="close-modal" onclick="closeProductModal()">&times;</button>
       <div class="modal-grid">
         <div>
-          <div class="modal-main-img">
-            <img id="mainModalImg" src="" alt="Product Image" />
-          </div>
+          <div class="modal-main-img" id="mainModalImg"></div>
           <div class="thumbnail-row" id="thumbnailRow"></div>
         </div>
         <div>
@@ -477,7 +471,7 @@
     const WHATSAPP_NUMBER = "918076082599";
     const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbxwX_wcBep1kYVF7vkdX7_YaHwE_uCyq7ozw3LD-pvytliNfgAq-hbQGIQSfhhY3GbYrw/exec";
 
-    // Har product ke liye aap multiple images (images array) de sakte hain
+    // All 14 products with correct image mapping
     const products = [
       {
         id: 1,
@@ -568,7 +562,7 @@
         name: "Black & White Liquid Soap Dispenser Combo (Pack of 2)",
         mrp: 1999,
         tag: "Combo Offer",
-        images: ["Screenshot_20261021_144556_Chrome.jpg"]
+        images: ["Screenshot_20261014_152021_Chrome.jpg"]
       },
       {
         id: 14,
@@ -592,7 +586,7 @@
         <span class="badge-off">${DISCOUNT_PERCENT}% OFF</span>
         <span class="badge-brass">${item.tag || 'Brass Range'}</span>
         <div class="img-wrap">
-          <img src="${item.images[0]}" alt="${item.name}" loading="lazy" />
+          <img src="${item.images[0]}" alt="${item.name}" loading="lazy" onerror="this.src='${item.images[1] || item.images[0]}'" />
         </div>
         <div class="card-body">
           <h3 class="product-title">${item.name}</h3>
@@ -617,20 +611,25 @@
 
       const mainImg = document.getElementById("mainModalImg");
       const thumbRow = document.getElementById("thumbnailRow");
-      mainImg.innerHTML = `<img src="${item.images[0]}" />`;
+      mainImg.innerHTML = `<img src="${item.images[0]}" alt="${item.name}" />`;
       thumbRow.innerHTML = "";
 
-      item.images.forEach((imgSrc, index) => {
-        const thumb = document.createElement("div");
-        thumb.className = `thumb ${index === 0 ? 'active' : ''}`;
-        thumb.innerHTML = `<img src="${imgSrc}" />`;
-        thumb.addEventListener("click", () => {
-          mainImg.innerHTML = `<img src="${imgSrc}" />`;
-          document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
-          thumb.classList.add('active');
+      if (item.images.length > 1) {
+        thumbRow.style.display = "flex";
+        item.images.forEach((imgSrc, index) => {
+          const thumb = document.createElement("div");
+          thumb.className = `thumb ${index === 0 ? 'active' : ''}`;
+          thumb.innerHTML = `<img src="${imgSrc}" alt="thumb" />`;
+          thumb.addEventListener("click", () => {
+            mainImg.innerHTML = `<img src="${imgSrc}" alt="${item.name}" />`;
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+          });
+          thumbRow.appendChild(thumb);
         });
-        thumbRow.appendChild(thumb);
-      });
+      } else {
+        thumbRow.style.display = "none";
+      }
 
       document.getElementById("productModal").style.display = "flex";
     }
@@ -647,4 +646,4 @@
       const phone = document.getElementById("buyerPhone").value.trim();
       const address = document.getElementById("buyerAddress").value.trim();
 
-      const message = `*New Direct Website Order!*%0A%0A*Product:* ${selectedProduct.name}%0A*Price:* ₹${selectedProduct.salePrice} (25% OFF)%0A%0A*Customer Details:*    
+      const message = `*New Direct 

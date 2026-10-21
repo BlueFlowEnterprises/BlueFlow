@@ -471,7 +471,7 @@
     const WHATSAPP_NUMBER = "918076082599";
     const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbxwX_wcBep1kYVF7vkdX7_YaHwE_uCyq7ozw3LD-pvytliNfgAq-hbQGIQSfhhY3GbYrw/exec";
 
-    // All 14 products with correct image mapping
+    // Corrected image mapping with working screenshot files first
     const products = [
       {
         id: 1,
@@ -485,14 +485,14 @@
         name: "Liquid Soap & Sanitizer Dispenser White (Pack of 1)",
         mrp: 999,
         tag: "Sanitary",
-        images: ["1000459044_2.jpg", "Screenshot_20261014_151006_Chrome.jpg"]
+        images: ["Screenshot_20261014_151006_Chrome.jpg", "1000459044_2.jpg"]
       },
       {
         id: 3,
         name: "Flora Long Body Bib Cock (Pack of 1)",
         mrp: 1249,
         tag: "Brass Core",
-        images: ["1000459046_2.jpg", "Screenshot_20261014_151103_Chrome.jpg"]
+        images: ["Screenshot_20261014_151103_Chrome.jpg", "1000459046_2.jpg"]
       },
       {
         id: 4,
@@ -572,7 +572,7 @@
         images: ["Screenshot_20261021_144556_Chrome.jpg", "1000462054_2.jpg"]
       }
     ];
-
+    
     let selectedProduct = null;
     const productGrid = document.getElementById("productGrid");
 
@@ -586,7 +586,7 @@
         <span class="badge-off">${DISCOUNT_PERCENT}% OFF</span>
         <span class="badge-brass">${item.tag || 'Brass Range'}</span>
         <div class="img-wrap">
-          <img src="${item.images[0]}" alt="${item.name}" loading="lazy" onerror="this.src='${item.images[1] || item.images[0]}'" />
+          <img src="${item.images[0]}" alt="${item.name}" loading="lazy" onerror="this.src='${item.images[1] || ''}'" />
         </div>
         <div class="card-body">
           <h3 class="product-title">${item.name}</h3>

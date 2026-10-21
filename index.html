@@ -59,11 +59,6 @@
       gap: 12px;
     }
 
-    .brand {
-      display: flex;
-      flex-direction: column;
-    }
-
     .brand h1 {
       font-size: 1.45rem;
       font-weight: 800;
@@ -77,34 +72,20 @@
       color: var(--text-muted);
     }
 
-    .nav-actions {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .btn-header {
+    .btn-wa-top {
+      background: #25D366;
+      color: #fff;
       text-decoration: none;
       padding: 8px 14px;
       border-radius: 8px;
       font-size: 0.85rem;
       font-weight: 600;
-      transition: 0.25s;
     }
 
-    .btn-wa-top {
-      background: #25D366;
-      color: #fff;
-    }
-
-    .btn-wa-top:hover {
-      opacity: 0.9;
-    }
-
-    /* Hero Section */
+    /* Hero & Stats */
     .hero {
       text-align: center;
-      padding: 50px 5% 35px;
+      padding: 40px 5% 20px;
       max-width: 900px;
       margin: 0 auto;
     }
@@ -122,24 +103,15 @@
     }
 
     .hero h2 {
-      font-size: 2.3rem;
+      font-size: 2.2rem;
       font-weight: 800;
-      margin-bottom: 14px;
-      line-height: 1.25;
+      margin-bottom: 10px;
       color: #f3e5ab;
     }
 
-    .hero p {
-      color: var(--text-muted);
-      font-size: 1rem;
-      max-width: 680px;
-      margin: 0 auto;
-    }
-
-    /* Brass Highlights / Statistical Banner */
     .stats-section {
       max-width: 1240px;
-      margin: 10px auto 30px;
+      margin: 10px auto 25px;
       padding: 0 5%;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -150,20 +122,19 @@
       background: var(--card-bg);
       border: 1px solid var(--glass-border);
       border-radius: 12px;
-      padding: 18px;
+      padding: 16px;
       text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
 
     .stat-card h4 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       color: var(--primary);
       margin-bottom: 4px;
       font-weight: 800;
     }
 
     .stat-card p {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
     }
 
@@ -196,14 +167,14 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transition: transform 0.25s ease, border-color 0.25s ease;
+      transition: transform 0.25s ease;
       position: relative;
+      cursor: pointer;
     }
 
     .product-card:hover {
       transform: translateY(-5px);
       border-color: var(--primary);
-      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.15);
     }
 
     .badge-off {
@@ -217,7 +188,6 @@
       padding: 4px 10px;
       border-radius: 6px;
       z-index: 2;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
     .badge-brass {
@@ -236,12 +206,11 @@
 
     .img-wrap {
       width: 100%;
-      height: 240px;
+      height: 230px;
       background: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
       padding: 8px;
     }
 
@@ -249,15 +218,10 @@
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
-      transition: transform 0.3s ease;
-    }
-
-    .product-card:hover .img-wrap img {
-      transform: scale(1.04);
     }
 
     .card-body {
-      padding: 18px;
+      padding: 16px;
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -266,208 +230,147 @@
     .product-title {
       font-size: 1rem;
       font-weight: 700;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       color: var(--text-main);
-      min-height: 48px;
+      min-height: 44px;
     }
 
     .price-box {
       display: flex;
       align-items: baseline;
       gap: 10px;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .sale-price {
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 800;
       color: #f3e5ab;
     }
 
     .mrp-price {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
       text-decoration: line-through;
     }
 
     .save-text {
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       color: #34d399;
       font-weight: 600;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
-    .card-actions {
-      margin-top: auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-    }
-
-    .btn {
-      text-align: center;
-      text-decoration: none;
-      padding: 10px 8px;
-      border-radius: 8px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      transition: 0.2s;
-      cursor: pointer;
-    }
-
-    .btn-wa {
-      background: #25D366;
-      color: #fff;
-    }
-
-    .btn-wa:hover {
-      background: #1ebe5b;
-    }
-
-    .btn-mail {
-      background: rgba(212, 175, 55, 0.12);
-      color: var(--accent);
-      border: 1px solid var(--glass-border);
-    }
-
-    .btn-mail:hover {
-      background: rgba(212, 175, 55, 0.25);
-    }
-
-    /* Reviews Section */
-    .reviews-section {
-      background: rgba(26, 21, 14, 0.7);
-      border-top: 1px solid var(--glass-border);
-      border-bottom: 1px solid var(--glass-border);
-      padding: 50px 5%;
-    }
-
-    .reviews-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1.3fr;
-      gap: 32px;
-    }
-
-    @media (max-width: 820px) {
-      .reviews-container {
-        grid-template-columns: 1fr;
-      }
-      .hero h2 {
-        font-size: 1.75rem;
-      }
-    }
-
-    .review-form-card {
-      background: var(--card-bg);
-      border: 1px solid var(--glass-border);
-      padding: 24px;
-      border-radius: 16px;
-    }
-
-    .review-form-card h3 {
-      margin-bottom: 16px;
-      font-size: 1.2rem;
-      color: #f3e5ab;
-    }
-
-    .form-group {
-      margin-bottom: 14px;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 0.85rem;
-      margin-bottom: 6px;
-      color: var(--text-muted);
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 10px 12px;
-      border-radius: 8px;
-      border: 1px solid var(--glass-border);
-      background: rgba(18, 15, 10, 0.9);
-      color: #fff;
-      font-size: 0.9rem;
-    }
-
-    .btn-submit {
+    .btn-buy-now {
       width: 100%;
       background: var(--primary);
       color: #120f0a;
       border: none;
-      padding: 12px;
+      padding: 10px;
       border-radius: 8px;
       font-weight: 800;
       cursor: pointer;
+      margin-top: auto;
       transition: 0.2s;
     }
 
-    .btn-submit:hover {
+    .btn-buy-now:hover {
       background: var(--accent);
     }
 
-    .reviews-list {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      max-height: 420px;
-      overflow-y: auto;
-      padding-right: 6px;
+    /* Modal Popup for Multiple Images & Direct Buy */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      padding: 15px;
     }
 
-    .review-item {
-      background: var(--card-bg);
-      border: 1px solid var(--glass-border);
-      padding: 16px;
-      border-radius: 12px;
-    }
-
-    .review-header {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 6px;
-    }
-
-    .reviewer-name {
-      font-weight: 700;
-      color: #f3e5ab;
-    }
-
-    .stars {
-      color: var(--primary);
-    }
-
-    /* Footer */
-    footer {
-      padding: 40px 5%;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.88rem;
-    }
-
-    .footer-details {
-      max-width: 750px;
-      margin: 0 auto 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .gst-badge {
-      display: inline-block;
-      background: rgba(212, 175, 55, 0.15);
-      color: #f3e5ab;
+    .modal-content {
+      background: #1a150e;
       border: 1px solid var(--primary);
-      padding: 4px 12px;
-      border-radius: 6px;
-      font-weight: 600;
-      margin-top: 6px;
+      border-radius: 16px;
+      max-width: 750px;
+      width: 100%;
+      padding: 24px;
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
     }
+
+    .close-modal {
+      position: absolute;
+      top: 15px; right: 20px;
+      font-size: 1.5rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    .modal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 700px) {
+      .modal-grid { grid-template-columns: 1fr; }
+    }
+
+    .modal-main-img {
+      width: 100%;
+      height: 260px;
+      background: #fff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
+      margin-bottom: 10px;
+    }
+
+    .modal-main-img img {
+      max-width: 100%; max-height: 100%; object-fit: contain;
+    }
+
+    .thumbnail-row {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+    }
+
+    .thumb {
+      width: 55px; height: 55px; background: #fff; border-radius: 6px; padding: 4px; cursor: pointer; border: 2px solid transparent;
+    }
+
+    .thumb.active { border-color: var(--primary); }
+    .thumb img { width: 100%; height: 100%; object-fit: contain; }
+
+    .checkout-form input, .checkout-form textarea {
+      width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: 1px solid var(--glass-border); background: #120f0a; color: #fff; font-size: 0.9rem;
+    }
+
+    /* Reviews & Footer */
+    .reviews-section {
+      background: rgba(26, 21, 14, 0.7);
+      border-top: 1px solid var(--glass-border);
+      padding: 40px 5%;
+    }
+
+    .reviews-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.3fr; gap: 32px; }
+    @media (max-width: 820px) { .reviews-container { grid-template-columns: 1fr; } }
+
+    .review-form-card, .review-item {
+      background: var(--card-bg); border: 1px solid var(--glass-border); padding: 20px; border-radius: 14px; margin-bottom: 12px;
+    }
+
+    footer { padding: 35px 5%; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+    .gst-badge { display: inline-block; background: rgba(212, 175, 55, 0.15); color: #f3e5ab; border: 1px solid var(--primary); padding: 4px 12px; border-radius: 6px; font-weight: 600; margin-top: 6px; }
   </style>
 </head>
 <body>
@@ -481,86 +384,89 @@
       <h1>BLUE FLOW ENTERPRISES</h1>
       <span>Premium Brass & Sanitary Bath Fittings | Sahibabad, Ghaziabad</span>
     </div>
-    <div class="nav-actions">
-      <a href="https://wa.me/918076082599?text=Hello%20Blue%20Flow%20Enterprises,%20I%20want%20to%20enquire%20about%20your%20brass%20collection." target="_blank" class="btn-header btn-wa-top">
-        💬 WhatsApp: +91 8076082599
-      </a>
-    </div>
+    <a href="https://wa.me/918076082599?text=Hello%20Blue%20Flow%20Enterprises" target="_blank" class="btn-wa-top">
+      💬 WhatsApp: +91 8076082599
+    </a>
   </header>
 
   <section class="hero">
-    <div class="discount-pill">✨ BRASS FINISH & ANTIQUE RANGE LIVE</div>
+    <div class="discount-pill">✨ MULTIPLE IMAGES & INSTANT BUY FEATURED</div>
     <h2>Elegance in Brass & Modern Sanitary Fittings</h2>
-    <p>Discover our exquisite range of heavy-duty brass fittings, antique designs, flexible kitchen cocks, and stainless steel health faucets with guaranteed durability.</p>
+    <p>Click on any product to view multiple angles, details, and place direct orders instantly.</p>
   </section>
 
-  <!-- Statistical & Highlights Section -->
   <section class="stats-section">
-    <div class="stat-card">
-      <h4>14+</h4>
-      <p>Premium Bath & Brass Products</p>
-    </div>
-    <div class="stat-card">
-      <h4>100%</h4>
-      <p>Heavy Duty Brass & SS Build</p>
-    </div>
-    <div class="stat-card">
-      <h4>Flat 25%</h4>
-      <p>Direct Factory Discount</p>
-    </div>
-    <div class="stat-card">
-      <h4>Pan India</h4>
-      <p>Trusted Supply & Support</p>
-    </div>
+    <div class="stat-card"><h4>14+</h4><p>Premium Products</p></div>
+    <div class="stat-card"><h4>100%</h4><p>Heavy Duty Build</p></div>
+    <div class="stat-card"><h4>Flat 25%</h4><p>Factory Discount</p></div>
+    <div class="stat-card"><h4>Instant</h4><p>Direct WhatsApp Order</p></div>
   </section>
 
   <main class="container">
-    <h2 class="section-title">Our Exclusive Catalog (Brass & Sanitaryware)</h2>
+    <h2 class="section-title">Our Exclusive Catalog</h2>
     <div id="productGrid" class="product-grid"></div>
   </main>
+
+  <!-- Modal for Product Details, Multiple Images & Quick Buy -->
+  <div id="productModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeProductModal()">&times;</button>
+      <div class="modal-grid">
+        <div>
+          <div class="modal-main-img">
+            <img id="mainModalImg" src="" alt="Product Image" />
+          </div>
+          <div class="thumbnail-row" id="thumbnailRow"></div>
+        </div>
+        <div>
+          <h2 id="modalTitle" style="font-size: 1.3rem; margin-bottom: 8px; color:#f3e5ab;"></h2>
+          <div class="price-box" style="margin-bottom: 10px;">
+            <span id="modalSalePrice" class="sale-price"></span>
+            <span id="modalMrpPrice" class="mrp-price"></span>
+          </div>
+          <p id="modalSave" style="color: #34d399; font-size: 0.85rem; font-weight: 600; margin-bottom: 16px;"></p>
+          
+          <hr style="border-color: var(--glass-border); margin-bottom: 16px;">
+          
+          <h4 style="font-size: 0.95rem; margin-bottom: 8px; color: #f3e5ab;">🛒 Direct Quick Order</h4>
+          <form class="checkout-form" id="quickOrderForm">
+            <input type="text" id="buyerName" placeholder="Your Full Name" required />
+            <input type="text" id="buyerPhone" placeholder="Mobile / WhatsApp Number" required />
+            <textarea id="buyerAddress" rows="2" placeholder="Delivery Address & Pincode" required></textarea>
+            <button type="submit" class="btn-buy-now">Place Order via WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <section class="reviews-section">
     <div class="reviews-container">
       <div class="review-form-card">
-        <h3>⭐ Leave a Customer Review</h3>
+        <h3 style="color:#f3e5ab; margin-bottom:12px;">⭐ Leave a Review</h3>
         <form id="reviewForm">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" required placeholder="Enter your full name" />
-          </div>
-          <div class="form-group">
-            <label for="rating">Rating</label>
-            <select id="rating" required>
-              <option value="5">⭐⭐⭐⭐⭐ (5/5 - Excellent)</option>
-              <option value="4">⭐⭐⭐⭐ (4/5 - Very Good)</option>
-              <option value="3">⭐⭐⭐ (3/5 - Good)</option>
-              <option value="2">⭐⭐ (2/5 - Fair)</option>
-              <option value="1">⭐ (1/5 - Poor)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="comment">Your Feedback</label>
-            <textarea id="comment" rows="3" required placeholder="Share your experience with Blue Flow brass & bath products..."></textarea>
-          </div>
-          <button type="submit" id="submitBtn" class="btn-submit">Submit Review</button>
-          <p id="formStatus" style="margin-top:10px; font-size:0.85rem;"></p>
+          <input type="text" id="revName" placeholder="Your Name" required style="width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid var(--glass-border); background:#120f0a; color:#fff;" />
+          <select id="revRating" style="width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid var(--glass-border); background:#120f0a; color:#fff;">
+            <option value="5">⭐⭐⭐⭐⭐ (5/5)</option>
+            <option value="4">⭐⭐⭐⭐ (4/5)</option>
+            <option value="3">⭐⭐⭐ (3/5)</option>
+          </select>
+          <textarea id="revComment" rows="2" placeholder="Your feedback..." required style="width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid var(--glass-border); background:#120f0a; color:#fff;"></textarea>
+          <button type="submit" style="width:100%; background:var(--primary); color:#120f0a; border:none; padding:10px; border-radius:8px; font-weight:800; cursor:pointer;">Submit Review</button>
         </form>
       </div>
-
       <div>
-        <h3 style="margin-bottom: 16px; font-size: 1.2rem; color: #f3e5ab;">💬 Live Customer Reviews</h3>
-        <div id="reviewsList" class="reviews-list">
-          <p style="color: var(--text-muted);">Loading live customer reviews...</p>
-        </div>
+        <h3 style="margin-bottom: 12px; color: #f3e5ab;">💬 Customer Reviews</h3>
+        <div id="reviewsList"><p style="color:var(--text-muted);">Loading reviews...</p></div>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="footer-details">
-      <strong style="color: #f3e5ab; font-size: 1.05rem;">BLUE FLOW ENTERPRISES</strong>
-      <span>📍 Address: Plot No. 180, Karkar Model Industrial Area, Sahibabad, Ghaziabad, Uttar Pradesh - 201010</span>
-      <span>📞 Phone / WhatsApp: +91 8076082599 | ✉️ Email: blueflowenterprises@gmail.com</span>
+      <strong style="color: #f3e5ab;">BLUE FLOW ENTERPRISES</strong>
+      <span>📍 Plot No. 180, Karkar Model Industrial Area, Sahibabad, Ghaziabad, UP - 201010</span>
+      <span>📞 WhatsApp: +91 8076082599 | ✉️ blueflowenterprises@gmail.com</span>
       <div><span class="gst-badge">GSTIN: 09KPDPK5769E1ZD</span></div>
     </div>
     <p>© 2026 Blue Flow Enterprises. All Rights Reserved.</p>
@@ -569,129 +475,116 @@
   <script>
     const DISCOUNT_PERCENT = 25;
     const WHATSAPP_NUMBER = "918076082599";
-    const BUSINESS_EMAIL = "blueflowenterprises@gmail.com";
     const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbxwX_wcBep1kYVF7vkdX7_YaHwE_uCyq7ozw3LD-pvytliNfgAq-hbQGIQSfhhY3GbYrw/exec";
 
+    // Har product ke liye aap multiple images (images array) de sakte hain
     const products = [
       {
         id: 1,
         name: "Stainless Steel Health Faucet (Pack of 3)",
         mrp: 2249,
         tag: "SS Finish",
-        img: "Screenshot_20261014_150846_Chrome.jpg"
+        images: ["Screenshot_20261014_150846_Chrome.jpg"]
       },
       {
         id: 2,
         name: "Liquid Soap & Sanitizer Dispenser White (Pack of 1)",
         mrp: 999,
         tag: "Sanitary",
-        img: "1000459044_2.jpg",
-        fallbackImg: "Screenshot_20261014_151006_Chrome.jpg"
+        images: ["1000459044_2.jpg", "Screenshot_20261014_151006_Chrome.jpg"]
       },
       {
         id: 3,
         name: "Flora Long Body Bib Cock (Pack of 1)",
         mrp: 1249,
         tag: "Brass Core",
-        img: "1000459046_2.jpg",
-        fallbackImg: "Screenshot_20261014_151103_Chrome.jpg"
+        images: ["1000459046_2.jpg", "Screenshot_20261014_151103_Chrome.jpg"]
       },
       {
         id: 4,
         name: "Flora Long Body Bib Cock (Pack of 2)",
         mrp: 2499,
         tag: "Brass Core",
-        img: "Screenshot_20261014_151148_Chrome.jpg"
+        images: ["Screenshot_20261014_151148_Chrome.jpg"]
       },
       {
         id: 5,
         name: "Fussion Long Body Dual Tap (Pack of 2)",
         mrp: 2499,
         tag: "Brass Heavy",
-        img: "Screenshot_20261014_151236_Chrome.jpg"
+        images: ["Screenshot_20261014_151236_Chrome.jpg"]
       },
       {
         id: 6,
         name: "ADMIX Lumi Long Body Tap (Pack of 2)",
         mrp: 2649,
         tag: "Brass Finish",
-        img: "Screenshot_20261014_151320_Chrome.jpg"
+        images: ["Screenshot_20261014_151320_Chrome.jpg"]
       },
       {
         id: 7,
         name: "ADMIX Lumi Long Body Tap (Pack of 1)",
         mrp: 1349,
         tag: "Brass Finish",
-        img: "Screenshot_20261014_151417_Chrome.jpg"
+        images: ["Screenshot_20261014_151417_Chrome.jpg"]
       },
       {
         id: 8,
         name: "Vignnet Long Body Bib Cock (Pack of 1)",
         mrp: 1249,
         tag: "Antique Brass",
-        img: "Screenshot_20261014_151509_Chrome.jpg"
+        images: ["Screenshot_20261014_151509_Chrome.jpg"]
       },
       {
         id: 9,
         name: "Chocolate Long Body Bib Cock (Pack of 2)",
         mrp: 2499,
         tag: "Brass Core",
-        img: "Screenshot_20261014_151654_Chrome.jpg"
+        images: ["Screenshot_20261014_151654_Chrome.jpg"]
       },
       {
         id: 10,
         name: "Liquid Soap Dispenser White (Pack of 2)",
         mrp: 1999,
         tag: "Bathroom",
-        img: "Screenshot_20261014_151815_Chrome.jpg"
+        images: ["Screenshot_20261014_151815_Chrome.jpg"]
       },
       {
         id: 11,
         name: "Liquid Soap Dispenser Matte Black (Pack of 2)",
         mrp: 1999,
         tag: "Matte Series",
-        img: "Screenshot_20261014_151854_Chrome.jpg"
+        images: ["Screenshot_20261014_151854_Chrome.jpg"]
       },
       {
         id: 12,
         name: "Bathroom Essentials Combo (SS Health Faucet + Dispenser)",
         mrp: 1749,
         tag: "Combo Offer",
-        img: "Screenshot_20261014_151924_Chrome.jpg"
+        images: ["Screenshot_20261014_151924_Chrome.jpg"]
       },
       {
         id: 13,
         name: "Black & White Liquid Soap Dispenser Combo (Pack of 2)",
         mrp: 1999,
         tag: "Combo Offer",
-        img: "Screenshot_20261014_152021_Chrome.jpg"
+        images: ["Screenshot_20261021_144556_Chrome.jpg"]
       },
       {
         id: 14,
         name: "Blue Flow Sink Cock with Opal Handle, Black Flexible",
         mrp: 2499,
         tag: "Brass & Flexible",
-        img: "Screenshot_20261021_144556_Chrome.jpg"
+        images: ["Screenshot_20261021_144556_Chrome.jpg", "1000462054_2.jpg"]
       }
     ];
 
+    let selectedProduct = null;
     const productGrid = document.getElementById("productGrid");
 
     products.forEach(item => {
       const salePrice = Math.round(item.mrp * (1 - DISCOUNT_PERCENT / 100));
       const savedAmount = item.mrp - salePrice;
-
-      const waMsg = encodeURIComponent(
-        `Hello Blue Flow Enterprises, I want to order:\n*${item.name}*\nOffer Price: ₹${salePrice} (25% OFF on MRP ₹${item.mrp})`
-      );
-      const mailSubject = encodeURIComponent(`Product Inquiry: ${item.name}`);
-      const mailBody = encodeURIComponent(
-        `Hello Blue Flow Enterprises,\n\nI would like to enquire about:\nProduct: ${item.name}\nOffer Price: ₹${salePrice} (25% OFF on MRP ₹${item.mrp})\n\nPlease share order and delivery details.`
-      );
-
-      const fallbackAttr = item.fallbackImg
-        ? `onerror="if(this.src.indexOf('${item.fallbackImg}')===-1){this.src='${item.fallbackImg}';}"`
-        : "";
 
       const card = document.createElement("div");
       card.className = "product-card";
@@ -699,7 +592,7 @@
         <span class="badge-off">${DISCOUNT_PERCENT}% OFF</span>
         <span class="badge-brass">${item.tag || 'Brass Range'}</span>
         <div class="img-wrap">
-          <img src="${item.img}" alt="${item.name}" loading="lazy" ${fallbackAttr} />
+          <img src="${item.images[0]}" alt="${item.name}" loading="lazy" />
         </div>
         <div class="card-body">
           <h3 class="product-title">${item.name}</h3>
@@ -708,43 +601,50 @@
             <span class="mrp-price">MRP ₹${item.mrp.toLocaleString('en-IN')}</span>
           </div>
           <div class="save-text">You Save ₹${savedAmount.toLocaleString('en-IN')} (${DISCOUNT_PERCENT}% OFF)</div>
-          <div class="card-actions">
-            <a href="https://wa.me/${WHATSAPP_NUMBER}?text=${waMsg}" target="_blank" class="btn btn-wa">WhatsApp Order</a>
-            <a href="mailto:${BUSINESS_EMAIL}?subject=${mailSubject}&body=${mailBody}" class="btn btn-mail">Email Inquiry</a>
-          </div>
+          <button class="btn-buy-now">View & Buy Now</button>
         </div>
       `;
+      card.addEventListener("click", () => openProductModal(item, salePrice, savedAmount));
       productGrid.appendChild(card);
     });
 
-    // Load & Submit Reviews via Google Sheet
-    async function loadReviews() {
-      const list = document.getElementById("reviewsList");
-      try {
-        const res = await fetch(GOOGLE_SHEET_URL);
-        const data = await res.json();
-        if (!Array.isArray(data) || data.length === 0) {
-          list.innerHTML = `<p style="color:var(--text-muted);">Be the first customer to leave a review!</p>`;
-          return;
-        }
-        list.innerHTML = data.reverse().map(r => `
-          <div class="review-item">
-            <div class="review-header">
-              <span class="reviewer-name">${r.name || "Customer"}</span>
-              <span class="stars">${"⭐".repeat(Number(r.rating) || 5)}</span>
-            </div>
-            <p style="font-size:0.9rem; color:#fcf8f2;">${r.comment || ""}</p>
-          </div>
-        `).join("");
-      } catch (err) {
-        list.innerHTML = `<p style="color:var(--text-muted);">Verified Customer Reviews across India.</p>`;
-      }
+    function openProductModal(item, salePrice, savedAmount) {
+      selectedProduct = { ...item, salePrice };
+      document.getElementById("modalTitle").innerText = item.name;
+      document.getElementById("modalSalePrice").innerText = "₹" + salePrice.toLocaleString('en-IN');
+      document.getElementById("modalMrpPrice").innerText = "MRP ₹" + item.mrp.toLocaleString('en-IN');
+      document.getElementById("modalSave").innerText = `You Save ₹${savedAmount.toLocaleString('en-IN')} (${DISCOUNT_PERCENT}% OFF)`;
+
+      const mainImg = document.getElementById("mainModalImg");
+      const thumbRow = document.getElementById("thumbnailRow");
+      mainImg.innerHTML = `<img src="${item.images[0]}" />`;
+      thumbRow.innerHTML = "";
+
+      item.images.forEach((imgSrc, index) => {
+        const thumb = document.createElement("div");
+        thumb.className = `thumb ${index === 0 ? 'active' : ''}`;
+        thumb.innerHTML = `<img src="${imgSrc}" />`;
+        thumb.addEventListener("click", () => {
+          mainImg.innerHTML = `<img src="${imgSrc}" />`;
+          document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+          thumb.classList.add('active');
+        });
+        thumbRow.appendChild(thumb);
+      });
+
+      document.getElementById("productModal").style.display = "flex";
     }
 
-    document.getElementById("reviewForm").addEventListener("submit", async (e) => {
+    function closeProductModal() {
+      document.getElementById("productModal").style.display = "none";
+    }
+
+    document.getElementById("quickOrderForm").addEventListener("submit", (e) => {
       e.preventDefault();
-      const status = document.getElementById("formStatus");
-      const btn = document.getElementById("submitBtn");
-      btn.disabled = true;
-      status.style.color = "#d4af37";
-    
+      if (!selectedProduct) return;
+
+      const name = document.getElementById("buyerName").value.trim();
+      const phone = document.getElementById("buyerPhone").value.trim();
+      const address = document.getElementById("buyerAddress").value.trim();
+
+      const message = `*New Direct Website Order!*%0A%0A*Product:* ${selectedProduct.name}%0A*Price:* ₹${selectedProduct.salePrice} (25% OFF)%0A%0A*Customer Details:*    

@@ -7,15 +7,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-dark: #120f0a;
-      --card-bg: rgba(26, 21, 14, 0.85);
-      --glass-border: rgba(212, 175, 55, 0.25);
-      --primary: #d4af37;
-      --primary-dark: #aa8c2c;
-      --accent: #e5c158;
+      --bg-dark: #f0f6ff;
+      --card-bg: #ffffff;
+      --glass-border: #cbd5e1;
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --accent: #0ea5e9;
       --success: #10b981;
-      --text-main: #fcf8f2;
-      --text-muted: #d1c7bd;
+      --text-main: #0f172a;
+      --text-muted: #475569;
     }
 
     * {
@@ -26,16 +26,15 @@
     }
 
     body {
-      background: radial-gradient(circle at top right, #332712, var(--bg-dark) 60%);
+      background: linear-gradient(135deg, #e0f2fe 0%, #f8fafc 100%);
       color: var(--text-main);
       line-height: 1.6;
       min-height: 100vh;
     }
 
-    /* Top Offer Banner */
     .offer-banner {
-      background: linear-gradient(90deg, #aa8c2c, #d4af37, #f3e5ab, #d4af37);
-      color: #1a150e;
+      background: linear-gradient(90deg, #0284c7, #0ea5e9, #38bdf8);
+      color: #ffffff;
       text-align: center;
       padding: 9px 16px;
       font-weight: 800;
@@ -43,12 +42,11 @@
       letter-spacing: 0.5px;
     }
 
-    /* Navbar */
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(18, 15, 10, 0.9);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--glass-border);
       padding: 14px 5%;
@@ -57,14 +55,13 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
     .brand h1 {
       font-size: 1.45rem;
       font-weight: 800;
-      background: linear-gradient(90deg, #f3e5ab, #d4af37);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #0284c7;
     }
 
     .brand span {
@@ -82,7 +79,6 @@
       font-weight: 600;
     }
 
-    /* Hero & Stats */
     .hero {
       text-align: center;
       padding: 40px 5% 20px;
@@ -92,9 +88,9 @@
 
     .discount-pill {
       display: inline-block;
-      background: rgba(212, 175, 55, 0.15);
+      background: #e0f2fe;
       border: 1px solid var(--primary);
-      color: var(--accent);
+      color: var(--primary);
       padding: 6px 16px;
       border-radius: 999px;
       font-weight: 700;
@@ -106,7 +102,7 @@
       font-size: 2.2rem;
       font-weight: 800;
       margin-bottom: 10px;
-      color: #f3e5ab;
+      color: #0f172a;
     }
 
     .stats-section {
@@ -124,6 +120,7 @@
       border-radius: 12px;
       padding: 16px;
       text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.02);
     }
 
     .stat-card h4 {
@@ -138,7 +135,6 @@
       color: var(--text-muted);
     }
 
-    /* Product Catalog */
     .container {
       max-width: 1240px;
       margin: 0 auto;
@@ -151,7 +147,7 @@
       margin-bottom: 24px;
       border-left: 4px solid var(--primary);
       padding-left: 12px;
-      color: #f3e5ab;
+      color: #0f172a;
     }
 
     .product-grid {
@@ -170,19 +166,21 @@
       transition: transform 0.25s ease;
       position: relative;
       cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
     .product-card:hover {
       transform: translateY(-5px);
       border-color: var(--primary);
+      box-shadow: 0 10px 20px rgba(2, 132, 199, 0.1);
     }
 
     .badge-off {
       position: absolute;
       top: 12px;
       left: 12px;
-      background: #aa8c2c;
-      color: #120f0a;
+      background: #ef4444;
+      color: #fff;
       font-size: 0.75rem;
       font-weight: 800;
       padding: 4px 10px;
@@ -194,9 +192,9 @@
       position: absolute;
       top: 12px;
       right: 12px;
-      background: rgba(212, 175, 55, 0.2);
+      background: #e0f2fe;
       border: 1px solid var(--primary);
-      color: var(--accent);
+      color: var(--primary);
       font-size: 0.7rem;
       font-weight: 700;
       padding: 3px 8px;
@@ -243,7 +241,7 @@
     .sale-price {
       font-size: 1.35rem;
       font-weight: 800;
-      color: #f3e5ab;
+      color: var(--primary);
     }
 
     .mrp-price {
@@ -254,7 +252,7 @@
 
     .save-text {
       font-size: 0.75rem;
-      color: #34d399;
+      color: #10b981;
       font-weight: 600;
       margin-bottom: 12px;
     }
@@ -262,7 +260,7 @@
     .btn-buy-now {
       width: 100%;
       background: var(--primary);
-      color: #120f0a;
+      color: #fff;
       border: none;
       padding: 10px;
       border-radius: 8px;
@@ -273,14 +271,14 @@
     }
 
     .btn-buy-now:hover {
-      background: var(--accent);
+      background: var(--primary-dark);
     }
 
     /* Modal Popup */
     .modal-overlay {
       position: fixed;
       top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.85);
+      background: rgba(0,0,0,0.7);
       display: none;
       justify-content: center;
       align-items: center;
@@ -289,15 +287,16 @@
     }
 
     .modal-content {
-      background: #1a150e;
-      border: 1px solid var(--primary);
+      background: #ffffff;
+      border: 1px solid var(--glass-border);
       border-radius: 16px;
-      max-width: 750px;
+      max-width: 780px;
       width: 100%;
       padding: 24px;
       position: relative;
       max-height: 90vh;
       overflow-y: auto;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     }
 
     .close-modal {
@@ -322,7 +321,7 @@
 
     .modal-main-img {
       width: 100%;
-      height: 260px;
+      height: 240px;
       background: #fff;
       border-radius: 10px;
       display: flex;
@@ -330,6 +329,7 @@
       justify-content: center;
       padding: 6px;
       margin-bottom: 10px;
+      border: 1px solid #e2e8f0;
     }
 
     .modal-main-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
@@ -341,19 +341,27 @@
     }
 
     .thumb {
-      width: 55px; height: 55px; background: #fff; border-radius: 6px; padding: 4px; cursor: pointer; border: 2px solid transparent;
+      width: 50px; height: 50px; background: #fff; border-radius: 6px; padding: 4px; cursor: pointer; border: 1px solid #cbd5e1;
     }
 
     .thumb.active { border-color: var(--primary); }
     .thumb img { width: 100%; height: 100%; object-fit: contain; }
 
     .checkout-form input, .checkout-form textarea {
-      width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: 1px solid var(--glass-border); background: #120f0a; color: #fff; font-size: 0.9rem;
+      width: 100%; padding: 9px; margin-bottom: 8px; border-radius: 8px; border: 1px solid #cbd5e1; background: #f8fafc; color: #0f172a; font-size: 0.85rem;
     }
 
-    /* Reviews & Footer */
+    .payment-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-size: 0.78rem;
+    }
+
     .reviews-section {
-      background: rgba(26, 21, 14, 0.7);
+      background: #ffffff;
       border-top: 1px solid var(--glass-border);
       padding: 40px 5%;
     }
@@ -362,17 +370,17 @@
     @media (max-width: 820px) { .reviews-container { grid-template-columns: 1fr; } }
 
     .review-form-card, .review-item {
-      background: var(--card-bg); border: 1px solid var(--glass-border); padding: 20px; border-radius: 14px; margin-bottom: 12px;
+      background: #f8fafc; border: 1px solid var(--glass-border); padding: 20px; border-radius: 14px; margin-bottom: 12px;
     }
 
-    footer { padding: 35px 5%; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
-    .gst-badge { display: inline-block; background: rgba(212, 175, 55, 0.15); color: #f3e5ab; border: 1px solid var(--primary); padding: 4px 12px; border-radius: 6px; font-weight: 600; margin-top: 6px; }
+    footer { padding: 35px 5%; text-align: center; color: var(--text-muted); font-size: 0.85rem; background: #ffffff; border-top: 1px solid var(--glass-border); }
+    .gst-badge { display: inline-block; background: #e0f2fe; color: #0284c7; border: 1px solid var(--primary); padding: 4px 12px; border-radius: 6px; font-weight: 600; margin-top: 6px; }
   </style>
 </head>
 <body>
 
   <div class="offer-banner">
-    👑 ROYAL BRASS & ANTIQUE COLLECTION — SPECIAL FACTORY DIRECT SALE: FLAT 25% OFF! 👑
+    🔥 ONLINE PAYMENT SPECIAL: GET FLAT 45% OFF DIRECTLY ON ALL PRODUCTS! 🔥
   </div>
 
   <header>
@@ -386,24 +394,24 @@
   </header>
 
   <section class="hero">
-    <div class="discount-pill">✨ MULTIPLE IMAGES & INSTANT BUY FEATURED</div>
+    <div class="discount-pill">✨ ONLINE PAYMENT KARNE PAR FLAT 45% OFF</div>
     <h2>Elegance in Brass & Modern Sanitary Fittings</h2>
-    <p>Click on any product to view multiple angles, details, and place direct orders instantly.</p>
+    <p>Net Banking ya Canara Bank transfer se payment karne par paayein poore 45% ka bhari discount!</p>
   </section>
 
   <section class="stats-section">
     <div class="stat-card"><h4>14+</h4><p>Premium Products</p></div>
     <div class="stat-card"><h4>100%</h4><p>Heavy Duty Build</p></div>
-    <div class="stat-card"><h4>Flat 25%</h4><p>Factory Discount</p></div>
-    <div class="stat-card"><h4>Instant</h4><p>Direct WhatsApp Order</p></div>
+    <div class="stat-card"><h4>Flat 45%</h4><p>Online Payment Discount</p></div>
+    <div class="stat-card"><h4>Secure</h4><p>Canara Bank Transfer</p></div>
   </section>
 
   <main class="container">
-    <h2 class="section-title">Our Exclusive Catalog</h2>
+    <h2 class="section-title">Our Exclusive Catalog (Online Special Rates)</h2>
     <div id="productGrid" class="product-grid"></div>
   </main>
 
-  <!-- Modal for Product Details, Multiple Images & Quick Buy -->
+  <!-- Modal for Product Details & Online Payment -->
   <div id="productModal" class="modal-overlay">
     <div class="modal-content">
       <button class="close-modal" onclick="closeProductModal()">&times;</button>
@@ -413,21 +421,33 @@
           <div class="thumbnail-row" id="thumbnailRow"></div>
         </div>
         <div>
-          <h2 id="modalTitle" style="font-size: 1.3rem; margin-bottom: 8px; color:#f3e5ab;"></h2>
-          <div class="price-box" style="margin-bottom: 10px;">
+          <h2 id="modalTitle" style="font-size: 1.15rem; margin-bottom: 4px; color:#0f172a;"></h2>
+          <div class="price-box" style="margin-bottom: 4px;">
             <span id="modalSalePrice" class="sale-price"></span>
             <span id="modalMrpPrice" class="mrp-price"></span>
           </div>
-          <p id="modalSave" style="color: #34d399; font-size: 0.85rem; font-weight: 600; margin-bottom: 16px;"></p>
+          <p id="modalSave" style="color: #10b981; font-size: 0.78rem; font-weight: 700; margin-bottom: 8px;"></p>
           
-          <hr style="border-color: var(--glass-border); margin-bottom: 16px;">
+          <hr style="border-color: #cbd5e1; margin-bottom: 8px;">
           
-          <h4 style="font-size: 0.95rem; margin-bottom: 8px; color: #f3e5ab;">🛒 Direct Quick Order</h4>
+          <h4 style="font-size: 0.85rem; margin-bottom: 4px; color: #16a34a;">🚀 Online Payment Offer (45% OFF Applied)</h4>
+          
+          <!-- Canara Bank Details Box -->
+          <div class="payment-box">
+            <p style="color: #16a34a; font-weight: 700; margin-bottom: 2px;">Canara Bank Net Banking / IMPS / NEFT Details:</p>
+            <p style="color: var(--text-muted);">
+              A/C Name: <b>BLUE FLOW ENTERPRISES</b>[cite: 4]<br>
+              A/C No: <b style="color: #0f172a;">120041930565</b>[cite: 4]<br>
+              IFSC Code: <b style="color: #0f172a;">CNRB0018776</b>[cite: 4]<br>
+              Branch: <b>Sahibabad Site IV, Ghaziabad</b>[cite: 4]
+            </p>
+          </div>
+
           <form class="checkout-form" id="quickOrderForm">
             <input type="text" id="buyerName" placeholder="Your Full Name" required />
             <input type="text" id="buyerPhone" placeholder="Mobile / WhatsApp Number" required />
             <textarea id="buyerAddress" rows="2" placeholder="Delivery Address & Pincode" required></textarea>
-            <button type="submit" class="btn-buy-now">Place Order via WhatsApp</button>
+            <button type="submit" class="btn-buy-now">Confirm Online Paid Order on WhatsApp</button>
           </form>
         </div>
       </div>
@@ -437,20 +457,20 @@
   <section class="reviews-section">
     <div class="reviews-container">
       <div class="review-form-card">
-        <h3 style="color:#f3e5ab; margin-bottom:12px;">⭐ Leave a Review</h3>
+        <h3 style="color:#0f172a; margin-bottom:12px;">⭐ Leave a Review</h3>
         <form id="reviewForm">
-          <input type="text" id="revName" placeholder="Your Name" required style="width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid var(--glass-border); background:#120f0a; color:#fff;" />
-          <select id="revRating" style="width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid var(--glass-border); background:#120f0a; color:#fff;">
+          <input type="text" id="revName" placeholder="Your Name" required style="width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid #cbd5e1; background:#ffffff; color:#0f172a;" />
+          <select id="revRating" style="width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid #cbd5e1; background:#ffffff; color:#0f172a;">
             <option value="5">⭐⭐⭐⭐⭐ (5/5)</option>
             <option value="4">⭐⭐⭐⭐ (4/5)</option>
             <option value="3">⭐⭐⭐ (3/5)</option>
           </select>
-          <textarea id="revComment" rows="2" placeholder="Your feedback..." required style="width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid var(--glass-border); background:#120f0a; color:#fff;"></textarea>
-          <button type="submit" style="width:100%; background:var(--primary); color:#120f0a; border:none; padding:10px; border-radius:8px; font-weight:800; cursor:pointer;">Submit Review</button>
+          <textarea id="revComment" rows="2" placeholder="Your feedback..." required style="width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid #cbd5e1; background:#ffffff; color:#0f172a;"></textarea>
+          <button type="submit" style="width:100%; background:var(--primary); color:#fff; border:none; padding:10px; border-radius:8px; font-weight:800; cursor:pointer;">Submit Review</button>
         </form>
       </div>
       <div>
-        <h3 style="margin-bottom: 12px; color: #f3e5ab;">💬 Customer Reviews</h3>
+        <h3 style="margin-bottom: 12px; color: #0f172a;">💬 Customer Reviews</h3>
         <div id="reviewsList"><p style="color:var(--text-muted);">Loading reviews...</p></div>
       </div>
     </div>
@@ -458,7 +478,7 @@
 
   <footer>
     <div class="footer-details">
-      <strong style="color: #f3e5ab;">BLUE FLOW ENTERPRISES</strong>
+      <strong style="color: #0f172a;">BLUE FLOW ENTERPRISES</strong>
       <span>📍 Plot No. 180, Karkar Model Industrial Area, Sahibabad, Ghaziabad, UP - 201010</span>
       <span>📞 WhatsApp: +91 8076082599 | ✉️ blueflowenterprises@gmail.com</span>
       <div><span class="gst-badge">GSTIN: 09KPDPK5769E1ZD</span></div>
@@ -467,112 +487,27 @@
   </footer>
 
   <script>
-    const DISCOUNT_PERCENT = 25;
+    const DISCOUNT_PERCENT = 45; // Online Payment Flat 45% OFF
     const WHATSAPP_NUMBER = "918076082599";
     const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbxwX_wcBep1kYVF7vkdX7_YaHwE_uCyq7ozw3LD-pvytliNfgAq-hbQGIQSfhhY3GbYrw/exec";
 
-    // Corrected image mapping with working screenshot files first
     const products = [
-      {
-        id: 1,
-        name: "Stainless Steel Health Faucet (Pack of 3)",
-        mrp: 2249,
-        tag: "SS Finish",
-        images: ["Screenshot_20261014_150846_Chrome.jpg"]
-      },
-      {
-        id: 2,
-        name: "Liquid Soap & Sanitizer Dispenser White (Pack of 1)",
-        mrp: 999,
-        tag: "Sanitary",
-        images: ["Screenshot_20261014_151006_Chrome.jpg", "1000459044_2.jpg"]
-      },
-      {
-        id: 3,
-        name: "Flora Long Body Bib Cock (Pack of 1)",
-        mrp: 1249,
-        tag: "Brass Core",
-        images: ["Screenshot_20261014_151103_Chrome.jpg", "1000459046_2.jpg"]
-      },
-      {
-        id: 4,
-        name: "Flora Long Body Bib Cock (Pack of 2)",
-        mrp: 2499,
-        tag: "Brass Core",
-        images: ["Screenshot_20261014_151148_Chrome.jpg"]
-      },
-      {
-        id: 5,
-        name: "Fussion Long Body Dual Tap (Pack of 2)",
-        mrp: 2499,
-        tag: "Brass Heavy",
-        images: ["Screenshot_20261014_151236_Chrome.jpg"]
-      },
-      {
-        id: 6,
-        name: "ADMIX Lumi Long Body Tap (Pack of 2)",
-        mrp: 2649,
-        tag: "Brass Finish",
-        images: ["Screenshot_20261014_151320_Chrome.jpg"]
-      },
-      {
-        id: 7,
-        name: "ADMIX Lumi Long Body Tap (Pack of 1)",
-        mrp: 1349,
-        tag: "Brass Finish",
-        images: ["Screenshot_20261014_151417_Chrome.jpg"]
-      },
-      {
-        id: 8,
-        name: "Vignnet Long Body Bib Cock (Pack of 1)",
-        mrp: 1249,
-        tag: "Antique Brass",
-        images: ["Screenshot_20261014_151509_Chrome.jpg"]
-      },
-      {
-        id: 9,
-        name: "Chocolate Long Body Bib Cock (Pack of 2)",
-        mrp: 2499,
-        tag: "Brass Core",
-        images: ["Screenshot_20261014_151654_Chrome.jpg"]
-      },
-      {
-        id: 10,
-        name: "Liquid Soap Dispenser White (Pack of 2)",
-        mrp: 1999,
-        tag: "Bathroom",
-        images: ["Screenshot_20261014_151815_Chrome.jpg"]
-      },
-      {
-        id: 11,
-        name: "Liquid Soap Dispenser Matte Black (Pack of 2)",
-        mrp: 1999,
-        tag: "Matte Series",
-        images: ["Screenshot_20261014_151854_Chrome.jpg"]
-      },
-      {
-        id: 12,
-        name: "Bathroom Essentials Combo (SS Health Faucet + Dispenser)",
-        mrp: 1749,
-        tag: "Combo Offer",
-        images: ["Screenshot_20261014_151924_Chrome.jpg"]
-      },
-      {
-        id: 13,
-        name: "Black & White Liquid Soap Dispenser Combo (Pack of 2)",
-        mrp: 1999,
-        tag: "Combo Offer",
-        images: ["Screenshot_20261014_152021_Chrome.jpg"]
-      },
-      {
-        id: 14,
-        name: "Blue Flow Sink Cock with Opal Handle, Black Flexible",
-        mrp: 2499,
-        tag: "Brass & Flexible",
-        images: ["Screenshot_20261021_144556_Chrome.jpg", "1000462054_2.jpg"]
-      }
+      { id: 1, name: "Stainless Steel Health Faucet (Pack of 3)", mrp: 2249, tag: "SS Finish", images: ["Screenshot_20261014_150846_Chrome.jpg"] },
+      { id: 2, name: "Liquid Soap & Sanitizer Dispenser White (Pack of 1)", mrp: 999, tag: "Sanitary", images: ["Screenshot_20261014_151006_Chrome.jpg", "1000459044_2.jpg"] },
+      { id: 3, name: "Flora Long Body Bib Cock (Pack of 1)", mrp: 1249, tag: "Brass Core", images: ["Screenshot_20261014_151103_Chrome.jpg", "1000459046_2.jpg"] },
+      { id: 4, name: "Flora Long Body Bib Cock (Pack of 2)", mrp: 2499, tag: "Brass Core", images: ["Screenshot_20261014_151148_Chrome.jpg"] },
+      { id: 5, name: "Fussion Long Body Dual Tap (Pack of 2)", mrp: 2499, tag: "Brass Heavy", images: ["Screenshot_20261014_151236_Chrome.jpg"] },
+      { id: 6, name: "ADMIX Lumi Long Body Tap (Pack of 2)", mrp: 2649, tag: "Brass Finish", images: ["Screenshot_20261014_151320_Chrome.jpg"] },
+      { id: 7, name: "ADMIX Lumi Long Body Tap (Pack of 1)", mrp: 1349, tag: "Brass Finish", images: ["Screenshot_20261014_151417_Chrome.jpg"] },
+      { id: 8, name: "Vignnet Long Body Bib Cock (Pack of 1)", mrp: 1249, tag: "Antique Brass", images: ["Screenshot_20261014_151509_Chrome.jpg"] },
+      { id: 9, name: "Chocolate Long Body Bib Cock (Pack of 2)", mrp: 2499, tag: "Brass Core", images: ["Screenshot_20261014_151654_Chrome.jpg"] },
+      { id: 10, name: "Liquid Soap Dispenser White (Pack of 2)", mrp: 1999, tag: "Bathroom", images: ["Screenshot_20261014_151815_Chrome.jpg"] },
+      { id: 11, name: "Liquid Soap Dispenser Matte Black (Pack of 2)", mrp: 1999, tag: "Matte Series", images: ["Screenshot_20261014_151854_Chrome.jpg"] },
+      { id: 12, name: "Bathroom Essentials Combo (SS Health Faucet + Dispenser)", mrp: 1749, tag: "Combo Offer", images: ["Screenshot_20261014_151924_Chrome.jpg"] },
+      { id: 13, name: "Black & White Liquid Soap Dispenser Combo (Pack of 2)", mrp: 1999, tag: "Combo Offer", images: ["Screenshot_20261014_152021_Chrome.jpg"] },
+      { id: 14, name: "Blue Flow Sink Cock with Opal Handle, Black Flexible", mrp: 2499, tag: "Brass & Flexible", images: ["Screenshot_20261021_144556_Chrome.jpg", "1000462054_2.jpg"] }
     ];
-    
+
     let selectedProduct = null;
     const productGrid = document.getElementById("productGrid");
 
@@ -594,8 +529,8 @@
             <span class="sale-price">₹${salePrice.toLocaleString('en-IN')}</span>
             <span class="mrp-price">MRP ₹${item.mrp.toLocaleString('en-IN')}</span>
           </div>
-          <div class="save-text">You Save ₹${savedAmount.toLocaleString('en-IN')} (${DISCOUNT_PERCENT}% OFF)</div>
-          <button class="btn-buy-now">View & Buy Now</button>
+          <div class="save-text">Online Pay Save ₹${savedAmount.toLocaleString('en-IN')} (${DISCOUNT_PERCENT}% OFF)</div>
+          <button class="btn-buy-now">View & Pay Online (45% OFF)</button>
         </div>
       `;
       card.addEventListener("click", () => openProductModal(item, salePrice, savedAmount));
@@ -607,7 +542,7 @@
       document.getElementById("modalTitle").innerText = item.name;
       document.getElementById("modalSalePrice").innerText = "₹" + salePrice.toLocaleString('en-IN');
       document.getElementById("modalMrpPrice").innerText = "MRP ₹" + item.mrp.toLocaleString('en-IN');
-      document.getElementById("modalSave").innerText = `You Save ₹${savedAmount.toLocaleString('en-IN')} (${DISCOUNT_PERCENT}% OFF)`;
+      document.getElementById("modalSave").innerText = `Online Payment Special Savings: ₹${savedAmount.toLocaleString('en-IN')} (${DISCOUNT_PERCENT}% OFF)`;
 
       const mainImg = document.getElementById("mainModalImg");
       const thumbRow = document.getElementById("thumbnailRow");
@@ -646,7 +581,7 @@
       const phone = document.getElementById("buyerPhone").value.trim();
       const address = document.getElementById("buyerAddress").value.trim();
 
-      const message = `*New Direct Website Order!*%0A%0A*Product:* ${selectedProduct.name}%0A*Price:* ₹${selectedProduct.salePrice} (25% OFF)%0A%0A*Customer Details:*%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}`;
+      const message = `*Online Paid Order (45% OFF Applied)!*%0A%0A*Product:* ${selectedProduct.name}%0A*Discounted Price:* ₹${selectedProduct.salePrice} (Flat 45% OFF Online Offer)%0A%0A*Customer Details:*%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}%0A*(Payment done via Canara Bank Net Banking)*`;
       
       window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
     });
@@ -663,10 +598,10 @@
         list.innerHTML = data.reverse().map(r => `
           <div class="review-item">
             <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
-              <strong style="color:#f3e5ab;">${r.name || "Customer"}</strong>
-              <span style="color:var(--primary);">${"⭐".repeat(Number(r.rating) || 5)}</span>
+              <strong style="color:#0284c7;">${r.name || "Customer"}</strong>
+              <span style="color:#eab308;">${"⭐".repeat(Number(r.rating) || 5)}</span>
             </div>
-            <p style="font-size:0.85rem; color:#fcf8f2;">${r.comment || ""}</p>
+            <p style="font-size:0.85rem; color:#0f172a;">${r.comment || ""}</p>
           </div>
         `).join("");
       } catch (err) {

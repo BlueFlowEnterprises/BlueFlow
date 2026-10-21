@@ -351,15 +351,6 @@
       width: 100%; padding: 9px; margin-bottom: 8px; border-radius: 8px; border: 1px solid #cbd5e1; background: #f8fafc; color: #0f172a; font-size: 0.85rem;
     }
 
-    .payment-box {
-      background: #f0fdf4;
-      border: 1px solid #bbf7d0;
-      padding: 10px;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      font-size: 0.78rem;
-    }
-
     .reviews-section {
       background: #ffffff;
       border-top: 1px solid var(--glass-border);
@@ -380,7 +371,7 @@
 <body>
 
   <div class="offer-banner">
-    🔥 ONLINE PAYMENT SPECIAL: GET FLAT 45% OFF DIRECTLY ON ALL PRODUCTS! 🔥
+    🔥 SPECIAL FACTORY SALE — FLAT 35% OFF ON ALL PRODUCTS! 🔥
   </div>
 
   <header>
@@ -394,24 +385,24 @@
   </header>
 
   <section class="hero">
-    <div class="discount-pill">✨ ONLINE PAYMENT KARNE PAR FLAT 45% OFF</div>
+    <div class="discount-pill">✨ SPECIAL FESTIVAL OFFER — FLAT 35% OFF</div>
     <h2>Elegance in Brass & Modern Sanitary Fittings</h2>
-    <p>Net Banking ya Canara Bank transfer se payment karne par paayein poore 45% ka bhari discount!</p>
+    <p>Explore our premium range of heavy-duty brass and sanitary fittings at flat 35% discount.</p>
   </section>
 
   <section class="stats-section">
     <div class="stat-card"><h4>14+</h4><p>Premium Products</p></div>
     <div class="stat-card"><h4>100%</h4><p>Heavy Duty Build</p></div>
-    <div class="stat-card"><h4>Flat 45%</h4><p>Online Payment Discount</p></div>
-    <div class="stat-card"><h4>Secure</h4><p>Canara Bank Transfer</p></div>
+    <div class="stat-card"><h4>Flat 35%</h4><p>Special Discount</p></div>
+    <div class="stat-card"><h4>Pan India</h4><p>Trusted Supply</p></div>
   </section>
 
   <main class="container">
-    <h2 class="section-title">Our Exclusive Catalog (Online Special Rates)</h2>
+    <h2 class="section-title">Our Exclusive Catalog</h2>
     <div id="productGrid" class="product-grid"></div>
   </main>
 
-  <!-- Modal for Product Details & Online Payment -->
+  <!-- Modal for Product Details & Quick Order -->
   <div id="productModal" class="modal-overlay">
     <div class="modal-content">
       <button class="close-modal" onclick="closeProductModal()">&times;</button>
@@ -426,28 +417,16 @@
             <span id="modalSalePrice" class="sale-price"></span>
             <span id="modalMrpPrice" class="mrp-price"></span>
           </div>
-          <p id="modalSave" style="color: #10b981; font-size: 0.78rem; font-weight: 700; margin-bottom: 8px;"></p>
+          <p id="modalSave" style="color: #10b981; font-size: 0.78rem; font-weight: 700; margin-bottom: 12px;"></p>
           
-          <hr style="border-color: #cbd5e1; margin-bottom: 8px;">
+          <hr style="border-color: #cbd5e1; margin-bottom: 12px;">
           
-          <h4 style="font-size: 0.85rem; margin-bottom: 4px; color: #16a34a;">🚀 Online Payment Offer (45% OFF Applied)</h4>
-          
-          <!-- Canara Bank Details Box -->
-          <div class="payment-box">
-            <p style="color: #16a34a; font-weight: 700; margin-bottom: 2px;">Canara Bank Net Banking / IMPS / NEFT Details:</p>
-            <p style="color: var(--text-muted);">
-              A/C Name: <b>BLUE FLOW ENTERPRISES</b>[cite: 4]<br>
-              A/C No: <b style="color: #0f172a;">120041930565</b>[cite: 4]<br>
-              IFSC Code: <b style="color: #0f172a;">CNRB0018776</b>[cite: 4]<br>
-              Branch: <b>Sahibabad Site IV, Ghaziabad</b>[cite: 4]
-            </p>
-          </div>
-
+          <h4 style="font-size: 0.9rem; margin-bottom: 8px; color: #0284c7;">🛒 Quick Order Form</h4>
           <form class="checkout-form" id="quickOrderForm">
             <input type="text" id="buyerName" placeholder="Your Full Name" required />
             <input type="text" id="buyerPhone" placeholder="Mobile / WhatsApp Number" required />
             <textarea id="buyerAddress" rows="2" placeholder="Delivery Address & Pincode" required></textarea>
-            <button type="submit" class="btn-buy-now">Confirm Online Paid Order on WhatsApp</button>
+            <button type="submit" class="btn-buy-now">Place Order via WhatsApp</button>
           </form>
         </div>
       </div>
@@ -464,6 +443,9 @@
             <option value="5">⭐⭐⭐⭐⭐ (5/5)</option>
             <option value="4">⭐⭐⭐⭐ (4/5)</option>
             <option value="3">⭐⭐⭐ (3/5)</option>
+            <option value="2">⭐⭐ (2/5)</option>
+            <option value="1">⭐ (1/5)</option>
+
           </select>
           <textarea id="revComment" rows="2" placeholder="Your feedback..." required style="width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid #cbd5e1; background:#ffffff; color:#0f172a;"></textarea>
           <button type="submit" style="width:100%; background:var(--primary); color:#fff; border:none; padding:10px; border-radius:8px; font-weight:800; cursor:pointer;">Submit Review</button>
@@ -487,7 +469,7 @@
   </footer>
 
   <script>
-    const DISCOUNT_PERCENT = 45; // Online Payment Flat 45% OFF
+    const DISCOUNT_PERCENT = 35; // Flat 35% OFF
     const WHATSAPP_NUMBER = "918076082599";
     const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbxwX_wcBep1kYVF7vkdX7_YaHwE_uCyq7ozw3LD-pvytliNfgAq-hbQGIQSfhhY3GbYrw/exec";
 
@@ -529,8 +511,8 @@
             <span class="sale-price">₹${salePrice.toLocaleString('en-IN')}</span>
             <span class="mrp-price">MRP ₹${item.mrp.toLocaleString('en-IN')}</span>
           </div>
-          <div class="save-text">Online Pay Save ₹${savedAmount.toLocaleString('en-IN')} (${DISCOUNT_PERCENT}% OFF)</div>
-          <button class="btn-buy-now">View & Pay Online (45% OFF)</button>
+          <div class="save-text">You Save ₹${savedAmount.toLocaleString('en-IN')} (${DISCOUNT_PERCENT}% OFF)</div>
+          <button class="btn-buy-now">View & Buy Now</button>
         </div>
       `;
       card.addEventListener("click", () => openProductModal(item, salePrice, savedAmount));
@@ -542,7 +524,7 @@
       document.getElementById("modalTitle").innerText = item.name;
       document.getElementById("modalSalePrice").innerText = "₹" + salePrice.toLocaleString('en-IN');
       document.getElementById("modalMrpPrice").innerText = "MRP ₹" + item.mrp.toLocaleString('en-IN');
-      document.getElementById("modalSave").innerText = `Online Payment Special Savings: ₹${savedAmount.toLocaleString('en-IN')} (${DISCOUNT_PERCENT}% OFF)`;
+      document.getElementById("modalSave").innerText = `You Save ₹${savedAmount.toLocaleString('en-IN')} (${DISCOUNT_PERCENT}% OFF)`;
 
       const mainImg = document.getElementById("mainModalImg");
       const thumbRow = document.getElementById("thumbnailRow");
@@ -581,7 +563,7 @@
       const phone = document.getElementById("buyerPhone").value.trim();
       const address = document.getElementById("buyerAddress").value.trim();
 
-      const message = `*Online Paid Order (45% OFF Applied)!*%0A%0A*Product:* ${selectedProduct.name}%0A*Discounted Price:* ₹${selectedProduct.salePrice} (Flat 45% OFF Online Offer)%0A%0A*Customer Details:*%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}%0A*(Payment done via Canara Bank Net Banking)*`;
+      const message = `*New Website Order (35% OFF)!*%0A%0A*Product:* ${selectedProduct.name}%0A*Offer Price:* ₹${selectedProduct.salePrice} (Flat 35% OFF)%0A%0A*Customer Details:*%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}`;
       
       window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
     });

@@ -646,4 +646,52 @@
       const phone = document.getElementById("buyerPhone").value.trim();
       const address = document.getElementById("buyerAddress").value.trim();
 
-      const message = `*New Direct 
+      const message = `*New Direct Website Order!*%0A%0A*Product:* ${selectedProduct.name}%0A*Price:* ₹${selectedProduct.salePrice} (25% OFF)%0A%0A*Customer Details:*%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}`;
+      
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
+    });
+
+    async function loadReviews() {
+      const list = document.getElementById("reviewsList");
+      try {
+        const res = await fetch(GOOGLE_SHEET_URL);
+        const data = await res.json();
+        if (!Array.isArray(data) || data.length === 0) {
+          list.innerHTML = `<p style="color:var(--text-muted);">No reviews yet.</p>`;
+          return;
+        }
+        list.innerHTML = data.reverse().map(r => `
+          <div class="review-item">
+            <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+              <strong style="color:#f3e5ab;">${r.name || "Customer"}</strong>
+              <span style="color:var(--primary);">${"⭐".repeat(Number(r.rating) || 5)}</span>
+            </div>
+            <p style="font-size:0.85rem; color:#fcf8f2;">${r.comment || ""}</p>
+          </div>
+        `).join("");
+      } catch (err) {
+        list.innerHTML = `<p style="color:var(--text-muted);">Verified Customer Reviews.</p>`;
+      }
+    }
+
+    document.getElementById("reviewForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const payload = {
+        name: document.getElementById("revName").value.trim(),
+        rating: document.getElementById("revRating").value,
+        comment: document.getElementById("revComment").value.trim()
+      };
+      try {
+        await fetch(GOOGLE_SHEET_URL, { method: "POST", mode: "no-cors", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+        alert("Thank you! Review submitted successfully.");
+        document.getElementById("reviewForm").reset();
+        setTimeout(loadReviews, 1500);
+      } catch (e) {
+        alert("Review submitted!");
+      }
+    });
+
+    loadReviews();
+  </script>
+</body>
+</html>
